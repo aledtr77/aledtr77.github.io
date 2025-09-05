@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /partials/
+Sitemap: https://codedge.it/sitemap.xml
+
+

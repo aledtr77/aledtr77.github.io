@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Generatore Box Shadow - Codedge</title><meta name="description" content="Crea facilmente effetti ombra per i tuoi elementi con il generatore Box-Shadow CSS. Copia il codice pronto all’uso per i tuoi progetti web."><link rel="canonical" href="https://codedge.it/strumenti/generatore-box-shadow/"><link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml"><link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF"><meta name="theme-color" content="#00A8FF"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="../../css/components/main.css"><link rel="stylesheet" href="../../css/components/navbar.css"><link rel="stylesheet" href="../../css/components/button.css"><link rel="stylesheet" href="../../css/components/footer.css"><script src="../../js/components/navbar.js" defer=""></script><script src="../../js/components/button.js" defer=""></script><script src="../../js/components/footer.js"></script><script src="../../js/components/navbar-loader.js"></script><style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.2;color:var(--text-color);margin:0;padding:0;background-color:var(--background-one)}h2{font-size:1.5rem;margin-top:60px}.section{padding:2rem;max-width:1200px;margin:0 auto}.intro,h2{text-align:center}.intro{margin-bottom:2rem}h1{font-size:2rem;margin-bottom:.7rem}.generator-container{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center}.controls{flex:1;max-width:450px;background:var(--background-two);padding:1.5rem;border-radius:8px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);margin-bottom:20px}.preview{flex:1;min-width:300px;display:flex;justify-content:center;align-items:center;padding:2rem}.preview-box{width:200px;height:200px;background:var(--text-color);border-radius:8px}.control-group{margin-bottom:1.5rem}label{display:block;margin-bottom:.5rem;font-weight:500}input[type=range]{width:100%;margin-bottom:.5rem}.code-output,.value-display{font-family:monospace;color:var(--text-color)}.code-output{background:var(--background-one);padding:1rem;border-radius:4px;margin:1rem}.color-picker{margin-top:1rem;margin-bottom:1rem}.preview-container{display:flex;flex-direction:column;align-items:center;margin:20px auto;width:300px}#outer-container,.color-controls{display:flex;justify-content:center}.color-controls{margin-bottom:20px;font-size:18px}.control-group{margin:0 10px;text-align:center}#outer-container{width:300px;height:300px;align-items:center;background-color:var(--text-color);border-radius:8px}#preview-box{width:150px;height:150px;background-color:var(--color-three);border-radius:5px}.color-preview{width:20px;height:20px;display:inline-block;margin-left:10px;border:1px solid var(--text-color)}#background-color,#object-color{max-width:140px}.tooltip-container{position:relative}.tooltip{visibility:hidden;position:absolute;z-index:1;bottom:-35px;left:50%;transform:translateX(-50%);opacity:0;background-color:var(--background-six);color:var(--text-color);text-align:center;border-radius:6px;padding:5px 10px;transition:opacity .3s,visibility .3s;font-size:14px}</style></head><body><header><nav class="navbar"><div class="navbar-container"><img src="../../assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35"><h1 class="resize-text"><i class="fas fa-adjust"></i> Generatore Box-Shadow CSS</h1><div class="menu-icon"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span></div><ul id="nav-menu" class="nav-menu"></ul></div></nav><div id="breadcrumb-container" aria-hidden="false"></div><script src="../../js/components/breadcrumb-loader.js" defer=""></script></header><h2>Strumento per creare ombre personalizzate in CSS</h2><div class="section"><div class="generator-container"><div class="controls"><div class="control-group"><label for="horizontal">Spostamento Orizzontale</label> <input type="range" id="horizontal" min="-50" max="50" value="0"> <span class="value-display" id="horizontal-value">0px</span></div><div class="control-group"><label for="vertical">Spostamento Verticale</label> <input type="range" id="vertical" min="-50" max="50" value="0"> <span class="value-display" id="vertical-value">0px</span></div><div class="control-group"><label for="blur">Sfocatura</label> <input type="range" id="blur" min="0" max="100" value="0"> <span class="value-display" id="blur-value">0px</span></div><div class="control-group"><label for="spread">Diffusione</label> <input type="range" id="spread" min="-50" max="50" value="0"> <span class="value-display" id="spread-value">0px</span></div><div class="control-group"><label for="color">Colore Ombra</label> <input type="color" id="color" value="#000000" class="color-picker"> <label for="opacity">Opacità ombra</label> <input type="range" id="opacity" min="0" max="100" value="20" aria-describedby="opacity-value"> <span class="value-display" id="opacity-value">20%</span></div><div class="code-output" id="css-code">box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);</div><div class="tooltip-container"><button class="button-simple" onclick="copyToClipboard(this)">Copia CSS</button> <span class="tooltip">CSS copiato!</span></div></div><div class="preview-container"><div class="color-controls"><div class="control-group"><label for="background-color">Colore sfondo:</label> <input id="background-color" placeholder="#FFFFFF"></div><div class="control-group"><label for="object-color">Colore oggetto:</label> <input id="object-color" placeholder="#3498DB"></div></div><div id="outer-container"><div id="preview-box"></div></div></div></div></div><script>const controls = {
+          horizontal: document.getElementById("horizontal"),
+          vertical: document.getElementById("vertical"),
+          blur: document.getElementById("blur"),
+          spread: document.getElementById("spread"),
+          color: document.getElementById("color"),
+          opacity: document.getElementById("opacity"),
+        },
+        preview = document.getElementById("preview-box"),
+        cssCode = document.getElementById("css-code");
+      function updateShadow() {
+        const o = {
+          horizontal: controls.horizontal.value,
+          vertical: controls.vertical.value,
+          blur: controls.blur.value,
+          spread: controls.spread.value,
+          color: controls.color.value,
+          opacity: controls.opacity.value,
+        };
+        Object.keys(o).forEach((e) => {
+          "color" !== e &&
+            (document.getElementById(`${e}-value`).textContent =
+              "opacity" === e ? `${o[e]}%` : `${o[e]}px`);
+        });
+        const e = o.color.replace("#", ""),
+          t = parseInt(e.substring(0, 2), 16),
+          n = parseInt(e.substring(2, 4), 16),
+          r = parseInt(e.substring(4, 6), 16),
+          l = `${o.horizontal}px ${o.vertical}px ${o.blur}px ${o.spread}px rgba(${t},${n},${r},${o.opacity / 100})`;
+        ((preview.style.boxShadow = l),
+          (cssCode.textContent = `box-shadow: ${l};`));
+      }
+      function copyToClipboard(o) {
+        const e = cssCode.textContent;
+        navigator.clipboard.writeText(e).then(() => {
+          showTooltip(o.parentNode);
+        });
+      }
+      function showTooltip(o) {
+        const e = o.querySelector(".tooltip");
+        ((e.style.visibility = "visible"),
+          (e.style.opacity = "1"),
+          setTimeout(() => {
+            ((e.style.visibility = "hidden"), (e.style.opacity = "0"));
+          }, 2e3));
+      }
+      (Object.values(controls).forEach((o) => {
+        o.addEventListener("input", updateShadow);
+      }),
+        updateShadow());
+      const outerContainer = document.getElementById("outer-container"),
+        previewBox = document.getElementById("preview-box"),
+        backgroundColorInput = document.getElementById("background-color"),
+        objectColorInput = document.getElementById("object-color"),
+        backgroundColorPreview = document.getElementById(
+          "background-color-preview",
+        ),
+        objectColorPreview = document.getElementById("object-color-preview");
+      function updateColors() {
+        const o = backgroundColorInput.value,
+          e = objectColorInput.value;
+        (isValidColor(o) &&
+          ((outerContainer.style.backgroundColor = o),
+          (backgroundColorPreview.style.backgroundColor = o)),
+          isValidColor(e) &&
+            ((previewBox.style.backgroundColor = e),
+            (objectColorPreview.style.backgroundColor = e)));
+      }
+      function isValidColor(o) {
+        return /^#[0-9A-F]{6}$/i.test(o);
+      }
+      (backgroundColorInput.addEventListener("input", updateColors),
+        objectColorInput.addEventListener("input", updateColors));</script></body></html>
