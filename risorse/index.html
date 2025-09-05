@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Risorse - Glossari Snippet HTML/CSS/JS - CODEDGE</title>
+    <meta
+      name="description"
+      content="Raccolta snella di concetti chiave e snippet pronti per HTML, CSS e JavaScript. Esempi copiabili, spiegazioni rapide e trucchi pratici per costruire subito."
+    />
+    <link rel="canonical" href="https://codedge.it/risorse/" />
+    <link
+      rel="icon"
+      href="/assets/icons/codedge-logo-minimal.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/favicon-32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/favicon-16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/assets/icons/android-chrome-192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/android-chrome-512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/icons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/icons/favicon-mask.svg"
+      color="#00A8FF"
+    />
+    <meta name="theme-color" content="#00A8FF" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/components/main.css" />
+    <link rel="stylesheet" href="../css/components/navbar.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/card.css" />
+    <link rel="stylesheet" href="../css/components/button.css" />
+    <script src="../js/components/footer.js" defer=""></script>
+    <script src="../js/components/button.js" defer=""></script>
+    <script src="../js/components/navbar.js" defer=""></script>
+    <script src="../js/components/navbar-loader.js"></script>
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      article h1,
+      aside h1,
+      nav h1,
+      section h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin: 20px;
+      }
+      .section {
+        background-color: var(--background-three);
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        min-height: 60vh;
+      }
+      .intro,
+      h2 {
+        text-align: center;
+      }
+      .intro {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem 1rem 0.1rem;
+      }
+      .intro h3,
+      .intro p {
+        color: var(--text-color);
+      }
+      .intro h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .intro p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 35px;
+      }
+      .hero,
+      .hero-content {
+        display: flex;
+        align-items: center;
+      }
+      .hero {
+        justify-content: center;
+        min-height: 80vh;
+        background-color: var(--background-three);
+        padding: 2rem;
+        margin-bottom: 5rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+      }
+      .hero-content {
+        max-width: 1350px;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hero p,
+      .hero-title {
+        color: var(--text-color);
+      }
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        margin: 60px 0 2rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+      .button-width {
+        max-width: 200px;
+      }
+      .grid {
+        display: grid;
+        gap: 20px;
+        padding: 0 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        align-items: stretch;
+        justify-items: center;
+        grid-auto-rows: 1fr;
+      }
+      @media (max-width: 1280px) {
+        .button-simple {
+          font-size: 0.9em;
+        }
+      }
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .hero .cta-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Navigazione principale">
+        <div class="navbar-container">
+          <img
+            src="../assets/icons/codedge-logo.svg"
+            alt="Logo codedge"
+            class="logo"
+            width="80"
+            height="35"
+          />
+          <h1 class="resize-text">Risorse</h1>
+          <div class="menu-icon">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul id="nav-menu" class="nav-menu"></ul>
+        </div>
+      </nav>
+      <div id="breadcrumb-container" aria-hidden="false"></div>
+      <script src="../js/components/breadcrumb-loader.js" defer=""></script>
+    </header>
+    <h2>Mappa rapida: concetti e codice per HTML, CSS e JavaScript</h2>
+    <main id="main-content">
+      <section id="risorse" class="section" aria-labelledby="risorse-title">
+        <div class="intro">
+          <h3 id="risorse-title">Panoramica rapida</h3>
+          <p>
+            Qui trovi una raccolta snella ma potente di concetti chiave e pezzi
+            di codice pronti all'uso per HTML, CSS e JavaScript. L'idea? Darti
+            una mappa rapida per orientarti nel mare di termini e funzioni, con
+            codice che puoi copiare, smontare, remixare e far tuo senza troppi
+            sbattimenti.
+          </p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h4>
+              <i class="fab fa-html5" aria-hidden="true"></i> Glossario HTML
+            </h4>
+            <p>
+              Tutti i tag HTML fondamentali per strutturare il contenuto web con
+              esempi pratici
+            </p>
+            <p class="resource-preview">
+              &lt;div&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;, &lt;form&gt;...
+            </p>
+            <a
+              href="glossario-html/"
+              class="button-simple"
+              aria-label="Esplora i termini HTML"
+              >Esplora i termini</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fab fa-css3" aria-hidden="true"></i> Glossario CSS
+            </h4>
+            <p>
+              Cerca le proprietà, i moduli e i concetti CSS, con descrizione e
+              codice di esempio
+            </p>
+            <p class="resource-preview">flexbox, grid, @media, transform...</p>
+            <a
+              href="glossario-css/"
+              class="button-simple"
+              aria-label="Scopri gli stili CSS"
+              >Scopri gli stili</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fab fa-js-square" aria-hidden="true"></i> Glossario JS
+            </h4>
+            <p>
+              Sfoglia concetti, funzioni, costrutti JavaScript per la
+              programmazione dinamica lato client
+            </p>
+            <p class="resource-preview">function, array, promise, async...</p>
+            <a
+              href="glossario-js/"
+              class="button-simple"
+              aria-label="Esplora le funzioni JavaScript"
+              >Esplora le funzioni</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fas fa-code" aria-hidden="true"></i> Snippet Library
+            </h4>
+            <p>
+              Soluzioni rapide e pronte all'uso per problemi di codifica comuni
+              nel frontend
+            </p>
+            <p class="resource-preview">fetch(), modal, animation...</p>
+            <a
+              href="snippet-library/"
+              class="button-simple"
+              aria-label="Copia e incolla snippet di codice"
+              >Copia e incolla</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

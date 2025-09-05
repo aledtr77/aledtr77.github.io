@@ -1,0 +1,5 @@
+# rendi eseguibile (una tantum)
+chmod +x scripts/build.js
+
+# esegui build in ambiente pulito (consigliato)
+env -i PATH="$PATH" NODE_OPTIONS= node scripts/build.js . dist

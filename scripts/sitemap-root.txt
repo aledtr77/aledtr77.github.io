@@ -1,0 +1,2 @@
+node scripts/generate-sitemap.js --dir . --base https://codedge.it
+

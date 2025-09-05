@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Strumenti front-end alcuni Tool pratici e gratuiti - Codedge</title>
+    <meta
+      name="description"
+      content="Collezione di tool front-end: genera palette e gradienti, crea box-shadow, comprimi immagini ed estrai colori. Tutto client-side, rapido e pronto da copiare."
+    />
+    <link rel="canonical" href="https://codedge.it/strumenti/" />
+    <link
+      rel="icon"
+      href="/assets/icons/codedge-logo-minimal.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/favicon-32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/favicon-16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/assets/icons/android-chrome-192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/android-chrome-512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/icons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/icons/favicon-mask.svg"
+      color="#00A8FF"
+    />
+    <meta name="theme-color" content="#00A8FF" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/components/main.css" />
+    <link rel="stylesheet" href="../css/components/navbar.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/card.css" />
+    <link rel="stylesheet" href="../css/components/button.css" />
+    <script src="../js/components/navbar.js" defer=""></script>
+    <script src="../js/components/footer.js" defer=""></script>
+    <script src="../js/components/button.js" defer=""></script>
+    <script src="../js/components/navbar-loader.js"></script>
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      article h1,
+      aside h1,
+      nav h1,
+      section h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin: 20px;
+      }
+      .section {
+        background-color: var(--background-three);
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        min-height: 60vh;
+      }
+      .intro,
+      h2 {
+        text-align: center;
+      }
+      .intro {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem 1rem 0.1rem;
+      }
+      .intro h3,
+      .intro p {
+        color: var(--text-color);
+      }
+      .intro h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .intro p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 35px;
+        max-width: 1600px;
+      }
+      .hero,
+      .hero-content {
+        display: flex;
+        align-items: center;
+      }
+      .hero {
+        justify-content: center;
+        min-height: 80vh;
+        background-color: var(--background-three);
+        padding: 2rem;
+        margin-bottom: 5rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+      }
+      .hero-content {
+        max-width: 1350px;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hero p,
+      .hero-title {
+        color: var(--text-color);
+      }
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        margin: 60px 0 2rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+      .button-width {
+        max-width: 200px;
+      }
+      .grid {
+        display: grid;
+        gap: 20px;
+        padding: 0 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        align-items: stretch;
+        justify-items: center;
+        grid-auto-rows: 1fr;
+      }
+      @media (max-width: 1280px) {
+        .button-simple {
+          font-size: 0.9em;
+        }
+      }
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .hero .cta-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Navigazione principale">
+        <div class="navbar-container">
+          <img
+            src="../assets/icons/codedge-logo.svg"
+            alt="Logo codedge"
+            class="logo"
+            width="80"
+            height="35"
+          />
+          <h1 class="resize-text">Strumenti</h1>
+          <div class="menu-icon">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul id="nav-menu" class="nav-menu"></ul>
+        </div>
+      </nav>
+      <div id="breadcrumb-container" aria-hidden="false"></div>
+      <script src="../js/components/breadcrumb-loader.js" defer=""></script>
+    </header>
+    <h2>Palette colori, gradienti, ottimizzazione immagini e tool CSS</h2>
+    <main id="main-content">
+      <section id="strumenti" class="section" aria-labelledby="strumenti-title">
+        <div class="intro">
+          <h3 id="strumenti-title">Panoramica rapida</h3>
+          <p>
+            Qui trovi una manciata di tool pensati per rendere più fluido il tuo
+            percorso di apprendimento e dare una spinta alla tua creatività da
+            sviluppatore frontend. Sono cose piccole ma concrete, fatte per
+            aiutarti a lavorare meglio, con meno frizioni e più voglia di
+            sperimentare. Perché se c'è una cosa che ho capito, è che a volte
+            basta l’attrezzo giusto al momento giusto per far girare tutto il
+            resto.
+          </p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h4>
+              <i class="fas fa-palette" aria-hidden="true"></i> Generatore
+              Colori
+            </h4>
+            <p>
+              Crea le tue prime palette di colori per sperimentare i tuoi primi
+              progetti web con il generatore di colori.
+            </p>
+            <a
+              href="generatore-colori/"
+              class="button-simple"
+              aria-label="Usa il generatore di colori"
+              >Usa lo strumento</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fas fa-tint" aria-hidden="true"></i> Generatore
+              Gradienti
+            </h4>
+            <p>
+              Strumento intuitivo per creare gradienti personalizzati
+              facilmente.
+            </p>
+            <a
+              href="generatore-gradienti/"
+              class="button-simple"
+              aria-label="Crea gradienti personalizzati"
+              >Crea gradiente</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fas fa-adjust" aria-hidden="true"></i> Generatore
+              Box-Shadow
+            </h4>
+            <p>
+              Crea ombre per i tuoi elementi HTML con il generatore di ombre
+              CSS.
+            </p>
+            <a
+              href="generatore-box-shadow/"
+              class="button-simple"
+              aria-label="Genera ombre per i tuoi elementi HTML"
+              >Genera ombre</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fas fa-compress-arrows-alt" aria-hidden="true"></i>
+              Compressore Immagini
+            </h4>
+            <p>
+              Ottimizza le immagini per il web riducendone le dimensioni senza
+              compromettere la qualità.
+            </p>
+            <a
+              href="compressore-immagini/"
+              class="button-simple"
+              aria-label="Ottimizza le dimensioni delle immagini per il web"
+              >Ottimizza immagini</a
+            >
+          </div>
+          <div class="card">
+            <h4>
+              <i class="fas fa-eye-dropper" aria-hidden="true"></i> Estrattore
+              Palette
+            </h4>
+            <p>
+              Carica un’immagine e ottieni 5 swatch, suggerimenti di contrasto,
+              gradienti e variabili CSS pronti da copiare.
+            </p>
+            <a
+              href="estrattore-palette/"
+              class="button-simple"
+              aria-label="Da immagine a palette: swatch, gradienti e JSON esportabili"
+              >Estrai palette</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

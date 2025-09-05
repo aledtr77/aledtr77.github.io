@@ -1,0 +1,2 @@
+chmod +x scripts/snapshot-backup.sh
+./scripts/snapshot-backup.sh

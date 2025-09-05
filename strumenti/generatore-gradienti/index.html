@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Generatore gradienti CSS online - Codedge</title>
+    <meta
+      name="description"
+      content="Crea facilmente sfondi a gradiente con il nostro generatore CSS online. Copia il codice pronto all'uso per i tuoi progetti web."
+    />
+    <link
+      rel="canonical"
+      href="https://codedge.it/strumenti/generatore-gradienti/"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/codedge-logo-minimal.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/favicon-32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/favicon-16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/assets/icons/android-chrome-192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/icons/android-chrome-512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/icons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/icons/favicon-mask.svg"
+      color="#00A8FF"
+    />
+    <meta name="theme-color" content="#00A8FF" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+      crossorigin=""
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
+    <link rel="preload" href="../../css/components/main.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="../../css/components/main.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="../../css/components/main.css"
+    /></noscript>
+    <link rel="preload" href="../../css/components/navbar.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="../../css/components/navbar.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="../../css/components/navbar.css"
+    /></noscript>
+    <link rel="preload" href="../../css/components/button.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="../../css/components/button.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="../../css/components/button.css"
+    /></noscript>
+    <link rel="preload" href="../../css/components/footer.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="../../css/components/footer.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="../../css/components/footer.css"
+    /></noscript>
+    <script src="../../js/components/navbar.js" defer=""></script>
+    <script src="../../js/components/button.js" defer=""></script>
+    <script src="../../js/components/footer.js"></script>
+    <script src="../../js/components/navbar-loader.js"></script>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-one);
+      }
+      .section {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .intro,
+      h2 {
+        text-align: center;
+      }
+      .intro {
+        margin-bottom: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 60px;
+      }
+      .generator-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .controls,
+      .preview {
+        flex: 1;
+        min-width: 300px;
+      }
+      .controls {
+        background: var(--background-two);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      .preview {
+        display: flex;
+        flex-direction: column;
+      }
+      .preview-box {
+        height: 300px;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        transition: 0.3s ease;
+      }
+      .color-stop {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        gap: 1rem;
+      }
+      .color-input {
+        width: 60px;
+        height: 30px;
+        padding: 0;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .position-input {
+        width: 60px;
+        padding: 0.25rem;
+        border: 1px solid var(--text-color);
+        border-radius: 4px;
+      }
+      .code-output {
+        background: var(--background-two);
+        color: var(--text-color);
+        padding: 1rem;
+        border-radius: 4px;
+        font-family: monospace;
+        margin-top: 1rem;
+      }
+      .gradient-type {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .gradient-type button {
+        flex: 1;
+      }
+      .angle-control {
+        display: none;
+        margin-bottom: 1rem;
+      }
+      .angle-control.active {
+        display: block;
+      }
+      input[type="range"] {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      .preset-gradients {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .preset {
+        height: 40px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid var(--text-color);
+      }
+      .tooltip-container {
+        position: relative;
+      }
+      .tooltip {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        background-color: var(--background-six);
+        color: var(--text-color);
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        transition:
+          opacity 0.3s,
+          visibility 0.3s;
+        font-size: 14px;
+      }
+      .bg-align {
+        background-color: var(--background-two);
+      }
+      h3 {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <img
+            src="../../assets/icons/codedge-logo.svg"
+            alt="Logo codedge"
+            class="logo"
+            width="80"
+            height="35"
+          />
+          <h1 class="resize-text">
+            <i class="fas fa-tint"></i> Generatore Gradienti CSS
+          </h1>
+          <div class="menu-icon">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul id="nav-menu" class="nav-menu"></ul>
+        </div>
+      </nav>
+      <div id="breadcrumb-container" aria-hidden="false"></div>
+      <script src="../../js/components/breadcrumb-loader.js" defer=""></script>
+    </header>
+    <h2>Come creare gradienti CSS personalizzati</h2>
+    <div class="section">
+      <div class="generator-container">
+        <div class="controls">
+          <div class="gradient-type">
+            <button class="button-simple" data-type="linear">Lineare</button>
+            <button class="button-simple button-outline" data-type="radial">
+              Radiale
+            </button>
+          </div>
+          <div class="angle-control">
+            <label for="angle">Angolo: <span id="angleValue">90</span>°</label>
+            <input type="range" id="angle" min="0" max="360" value="90" />
+          </div>
+          <div id="colorStops">
+            <div class="color-stop">
+              <input type="color" class="color-input" value="#3b82f6" />
+              <input
+                type="number"
+                class="position-input"
+                value="0"
+                min="0"
+                max="100"
+              />
+              % <button class="button-simple">x</button>
+            </div>
+            <div class="color-stop">
+              <input type="color" class="color-input" value="#ef4444" />
+              <input
+                type="number"
+                class="position-input"
+                value="100"
+                min="0"
+                max="100"
+              />
+              % <button class="button-simple">x</button>
+            </div>
+          </div>
+          <button class="button-simple" id="addColor">+ Aggiungi Colore</button>
+          <h3>Preset</h3>
+          <div class="preset-gradients"></div>
+        </div>
+        <div class="preview">
+          <div class="preview-box" id="previewBox"></div>
+          <button
+            class="button-simple bg-align"
+            onclick="copyToClipboard(this)"
+          >
+            Copia CSS
+          </button>
+          <div class="code-output" id="cssCode"></div>
+          <div class="tooltip-container">
+            <span class="tooltip">CSS copiato!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const previewBox = document.getElementById("previewBox"),
+        cssCode = document.getElementById("cssCode"),
+        colorStops = document.getElementById("colorStops"),
+        addColorBtn = document.getElementById("addColor"),
+        angleControl = document.querySelector(".angle-control"),
+        angleInput = document.getElementById("angle"),
+        angleValue = document.getElementById("angleValue");
+      let gradientType = "radial";
+      const presets = [
+          { colors: ["#3b82f6", "#ef4444"], angle: 90 },
+          { colors: ["#10b981", "#3b82f6"], angle: 45 },
+          { colors: ["#8b5cf6", "#ec4899"], angle: 135 },
+          { colors: ["#f59e0b", "#ef4444"], angle: 0 },
+          { colors: ["#6366f1", "#8b5cf6"], angle: 180 },
+          { colors: ["#14b8a6", "#10b981"], angle: 225 },
+        ],
+        presetContainer = document.querySelector(".preset-gradients");
+      function attachColorStopListeners(e) {
+        (e
+          .querySelectorAll("input")
+          .forEach((e) => e.addEventListener("input", updateGradient)),
+          e.querySelector("button").addEventListener("click", () => {
+            colorStops.children.length > 2 && (e.remove(), updateGradient());
+          }));
+      }
+      function updateGradient() {
+        const e = Array.from(colorStops.children).map(
+          (e) =>
+            `${e.querySelector(".color-input").value} ${e.querySelector(".position-input").value}%`,
+        );
+        let t;
+        ("linear" === gradientType
+          ? ((t = `linear-gradient(${angleInput.value}deg, ${e.join(", ")})`),
+            angleControl.classList.add("active"))
+          : ((t = `radial-gradient(circle, ${e.join(", ")})`),
+            angleControl.classList.remove("active")),
+          (previewBox.style.background = t),
+          (cssCode.textContent = `background: ${t};`));
+      }
+      function applyPreset(e) {
+        for (; colorStops.children.length > 0; )
+          colorStops.removeChild(colorStops.lastChild);
+        (e.colors.forEach((t, o) => {
+          const n = document.createElement("div");
+          n.className = "color-stop";
+          const l = 0 === o ? 0 : o === e.colors.length - 1 ? 100 : 50;
+          ((n.innerHTML = `\n                    <input type="color" class="color-input" value="${t}">\n                    <input type="number" class="position-input" value="${l}" min="0" max="100"> %\n                    <button class="button-simple button-outline">x</button>\n                `),
+            colorStops.appendChild(n),
+            attachColorStopListeners(n));
+        }),
+          (angleInput.value = e.angle),
+          (angleValue.textContent = e.angle),
+          updateGradient());
+      }
+      function copyToClipboard(e) {
+        const t = cssCode.textContent;
+        navigator.clipboard.writeText(t).then(() => {
+          showTooltip(e.parentNode);
+        });
+      }
+      function showTooltip(e) {
+        const t = e.querySelector(".tooltip");
+        ((t.style.visibility = "visible"),
+          (t.style.opacity = "1"),
+          setTimeout(() => {
+            ((t.style.visibility = "hidden"), (t.style.opacity = "0"));
+          }, 2e3));
+      }
+      (presets.forEach((e) => {
+        const t = document.createElement("div");
+        ((t.className = "preset"),
+          (t.style.background = `linear-gradient(${e.angle}deg, ${e.colors.join(", ")})`),
+          t.addEventListener("click", () => applyPreset(e)),
+          presetContainer.appendChild(t));
+      }),
+        document.querySelectorAll(".gradient-type button").forEach((e) => {
+          e.addEventListener("click", () => {
+            (document
+              .querySelectorAll(".gradient-type button")
+              .forEach((e) => e.classList.toggle("button-outline")),
+              (gradientType = e.dataset.type),
+              angleControl.classList.toggle(
+                "active",
+                "linear" === gradientType,
+              ),
+              updateGradient());
+          });
+        }),
+        angleInput.addEventListener("input", () => {
+          ((angleValue.textContent = angleInput.value), updateGradient());
+        }),
+        addColorBtn.addEventListener("click", () => {
+          const e = document.createElement("div");
+          ((e.className = "color-stop"),
+            (e.innerHTML =
+              '\n                <input type="color" class="color-input" value="#3b82f6">\n                <input type="number" class="position-input" value="50" min="0" max="100"> %\n                <button class="button-simple button-outline">×</button>\n            '),
+            colorStops.appendChild(e),
+            attachColorStopListeners(e),
+            updateGradient());
+        }),
+        document
+          .querySelectorAll(".color-stop")
+          .forEach(attachColorStopListeners),
+        updateGradient());
+    </script>
+  </body>
+</html>
