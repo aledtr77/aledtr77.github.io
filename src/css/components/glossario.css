@@ -1,0 +1,446 @@
+body {
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-one);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--background-one);
+  z-index: 1000;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+  white-space: nowrap;
+  color: var(--color-three);
+}
+
+.search-container {
+  display: flex;
+  justify-content: left;
+  margin-top: 0px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+#search {
+  width: 250px;
+  /* Larghezza fissa per tutti gli schermi */
+  max-width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--background-two);
+  color: var(--text-color);
+  border: 1px solid;
+  border-color: var(--background-two) var(--background-four)
+    var(--background-four) var(--background-two);
+  box-shadow: var(--box-shadow);
+}
+
+summary {
+  padding: 9px 9px 9px 40px;
+  background-color: var(--background-five);
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  /*effetto 3d*/
+  border: 1px solid;
+  border-color: var(--background-two) var(--background-four)
+    var(--background-four) var(--background-two);
+  box-shadow: var(--box-shadow);
+}
+
+summary::before {
+  content: "\25BC";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+summary:hover {
+  background-color: var(--background-six);
+}
+
+details {
+  background-color: var(--background-two);
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+details p {
+  padding: 18px;
+  text-align: justify;
+  margin: 0 18px;
+}
+
+details[open] > summary::before {
+  content: "\25B2";
+}
+
+details[open] > :not(summary) {
+  animation: slideDown 0.3s ease-out;
+}
+
+.tag-group {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-left: 20px;
+}
+
+.tag-description {
+  font-weight: normal;
+  margin-left: 18px;
+  /* Distanza fissa dal bordo della card */
+}
+
+ol {
+  margin-left: 20px;
+  padding-right: 18px;
+  line-height: 1.8;
+}
+
+ol li {
+  margin-bottom: 15px;
+  text-align: justify;
+  margin: 25px;
+}
+
+.code-container {
+  position: relative;
+  margin: 20px 18px;
+  background-color: var(--background-one);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+pre {
+  margin: 0;
+  padding: 40px 15px 15px;
+  overflow-x: auto;
+
+  /* aggiunta modifiche mobile first */
+
+  white-space: pre-wrap;
+  /* Mantiene i ritorni a capo ma consente la rottura delle righe */
+  word-wrap: break-word;
+  /* Spezza le parole lunghe se necessario */
+  overflow-wrap: break-word;
+  /* Compatibilità per il wrapping delle parole */
+  text-align: left;
+  /* Allinea il testo a sinistra */
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--text-color);
+
+  /* aggiunta modifiche mobile first */
+
+  white-space: pre-wrap;
+  /* Spezza le righe automaticamente */
+  word-wrap: break-word;
+  /* Spezza le parole lunghe */
+  overflow-wrap: break-word;
+  /* Compatibilità con altre versioni del wrapping */
+  display: block;
+  /* Mantiene il codice come blocco */
+  text-align: left;
+  /* Allinea il testo a sinistra */
+}
+
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--background-two);
+  border: none;
+  color: var(--text-color);
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.1s;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  background-color: var(--background-five);
+  transform: scale(1.05);
+}
+
+.copy-btn i {
+  margin-right: 6px;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.main-content {
+  margin-left: 360px;
+}
+
+aside {
+  position: fixed;
+  top: 210px;
+  /* Modifica questo valore se hai un header fisso */
+  left: 0;
+  margin-left: 6px;
+  width: 350px;
+  max-height: 80%;
+  background-color: var(--background-two);
+  overflow-y: scroll;
+  z-index: 1000;
+  border-radius: 10px;
+  /*effetto 3d*/
+  border: 1px solid;
+  border-color: var(--background-two) var(--background-four)
+    var(--background-four) var(--background-two);
+  box-shadow: var(--box-shadow);
+}
+
+.aside-content {
+  padding: 10px;
+}
+
+main {
+  width: 100%;
+  margin-top: 0;
+}
+
+/* Stile per la barra di scorrimento dell'aside */
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: var(--background-six);
+  border-radius: 4px;
+}
+
+aside::-webkit-scrollbar-track {
+  background-color: var(--background-two);
+}
+
+/* Stile per il contenuto dell'aside */
+.concept-list,
+.concept-list ul {
+  list-style-type: none;
+  padding-left: 15px;
+  margin: 0;
+}
+
+.concept-list > li {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.clickable-item {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  cursor: pointer;
+  padding: 2px 0;
+  margin-left: 35px;
+}
+
+.clickable-item:hover {
+  color: var(--color-three);
+  text-decoration: underline;
+}
+
+@media (max-height: 650px) {
+  aside {
+    max-height: 75%;
+  }
+}
+
+@media (max-height: 550px) {
+  aside {
+    max-height: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tag-group {
+    display: none;
+  }
+}
+
+/* Media query per tablet */
+@media screen and (max-width: 1180px) {
+  body {
+    font-size: 1em;
+  }
+
+  pre {
+    padding: 20px 10px 10px;
+  }
+
+  .code-container {
+    margin: 10px;
+  }
+
+  .copy-btn {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  .logo {
+    width: 35px;
+    height: 37px;
+  }
+
+  #search {
+    max-width: none;
+  }
+
+  /* sezione menu toggle */
+
+  .sidebar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: -6px;
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 5px;
+    /* Aggiusta questa altezza in base all'altezza dell'header */
+    left: 20px;
+    z-index: 1002;
+    background-color: transparent;
+    border-radius: 3px;
+  }
+
+  .sidebar-toggle .bar,
+  .menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s;
+  }
+
+  /* Effetto hover */
+  .sidebar-toggle:hover .bar,
+  .menu-icon:hover .bar {
+    background-color: var(--color-three);
+    /* Cambia colore delle barre */
+    transform: scale(1.1);
+    /* Ingrandisce leggermente le barre */
+  }
+
+  .sidebar-toggle.active .bar:nth-child(1),
+  .menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .sidebar-toggle.active .bar:nth-child(2),
+  .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .sidebar-toggle.active .bar:nth-child(3),
+  .menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7.3px, -7.3px);
+  }
+
+  .main-content.aside-open {
+    margin-left: 0;
+    /* Rimuovi questo per evitare lo spostamento del contenuto */
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  details {
+    position: relative;
+    z-index: 1;
+    /* Assicura che i details siano sotto l'aside ma sopra altri elementi */
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  aside {
+    left: -360px;
+    transition: left 0.3s ease;
+  }
+
+  aside.active {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  details p,
+  ol {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  body {
+    font-size: 0.9em;
+  }
+
+  .code-container {
+    margin: 5px;
+  }
+
+  pre {
+    padding: 15px 5px 5px;
+  }
+}
+
+.glossari_resize {
+  font-size: 1.5rem;
+  margin-left: 200px;
+}
+
+@media (max-width: 1180px) {
+  .glossari_resize {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}

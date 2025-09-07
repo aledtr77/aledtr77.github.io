@@ -1,0 +1,77 @@
+/* buttons-simple.css */
+body {
+  background-color: var(--background-one);
+}
+
+.button-simple {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.3s ease;
+  position: relative;
+  letter-spacing: 0.05rem;
+  outline: none;
+  text-decoration: none;
+  width: 100%;
+  max-height: 60px;
+  margin-top: auto;
+  background-color: var(--color-four);
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  background-color: darken(var(--color-three), 10%);
+  box-shadow: var(--box-shadow);
+}
+
+.button-simple:hover {
+  background-color: var(--color-three);
+  border-color: var(--color-three);
+  transform: scale(1.01);
+  color: #fff;
+}
+
+.button-simple:active {
+  border-color: var(--color-three);
+  transform: translate(1px, 1px);
+}
+
+.button-simple:active span {
+  transform: translate(1px, 1px);
+}
+
+.button-simple span {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-simple:focus {
+  outline-offset: 1px;
+}
+
+.button-outline {
+  background-color: transparent;
+  border-color: var(--color-one);
+  color: #fff;
+  transition:
+    background-color 0.2s ease-in-out,
+    color ease-in-out 0.2s;
+}
+
+.button-outline:hover {
+  background-color: var(--color-one);
+  color: var(--text-color);
+}
+
+.button-outline:active {
+  background-color: var(--color-three);
+  border-color: var(--color-three);
+  color: var(--text-color);
+}

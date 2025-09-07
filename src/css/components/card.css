@@ -1,0 +1,127 @@
+/* ====== CARD EFFECTS ENHANCEMENT - DA AGGIUNGERE AL TUO CSS ====== */
+
+/* Card base - versione migliorata */
+.card {
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--background-two);
+  border-radius: 12px; /* Bordi più arrotondati */
+  padding: 1.5rem 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Transizione più fluida */
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effetto gradiente superiore */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-three), var(--text-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+/* Effetto hover migliorato */
+.card:hover {
+  transform: translateY(-8px); /* Aumentato l'effetto */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Titolo e icona */
+.card h4 {
+  font-size: 1.8em; /* Leggermente ridotto per equilibrio */
+  font-family: var(--heading-font);
+  color: var(--text-color);
+  margin: 0 0 1rem 0;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.card h4 i {
+  color: var(--color-three);
+  transition: transform 0.3s ease;
+}
+
+.card:hover h4 i {
+  transform: scale(1.1);
+}
+
+/* Contenuto: occupa lo spazio rimanente, spinge il CTA in fondo */
+.card p {
+  margin: 0 0 1.5rem 0;
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Preview del contenuto (se presente) */
+.card .resource-preview {
+  font-family: "Courier New", monospace;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+  opacity: 0.8;
+}
+
+/* Bottone/CTA sempre in fondo e centrato */
+.card .button-simple,
+.card span.button-simple {
+  margin-top: auto;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover .button-simple {
+  transform: translateY(-2px);
+}
+
+/* Coming soon badge - mantenuto identico */
+.coming-soon {
+  opacity: 0.7;
+  position: relative;
+}
+
+.coming-soon::after {
+  content: "In arrivo";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #ffd700;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid black;
+  text-transform: uppercase;
+}
+
+.coming-soon .button-simple {
+  cursor: default;
+  background-color: #ccc;
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem 0.8rem;
+    border-radius: 10px;
+    padding: 1.25rem 0.8rem;
+  }
+}

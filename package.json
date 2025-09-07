@@ -1,32 +1,20 @@
 {
-  "name": "codedge",
+  "name": "codedge-site",
   "version": "1.0.0",
-  "description": "**Questo file è per il branch `dev`.**   Qui risiedono gli script di sviluppo (sitemap, breadcrumbs, formatter, minify, snapshot).",
-  "main": "index.js",
+  "private": true,
+  "description": "Codedge static site — minimal src-only build pipeline",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf dist",
-    "build": "node scripts/build.js . dist",
-    "minify:assets": "node scripts/minify-assets.js . dist",
-    "minify:html": "node scripts/minify-all-root.js . dist"
+    "check-paths": "node scripts/find-suspicious-paths.js",
+    "normalize-paths": "node scripts/normalize-paths-cheerio.js --apply",
+    "normalize-paths:dry": "node scripts/normalize-paths-cheerio.js",
+    "build": "node scripts/simple-build.js --apply",
+    "build:dry": "node scripts/simple-build.js",
+    "clean": "rm -rf dist .parcel-cache .vite .cache prebuilt"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aledtr77/codedge.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aledtr77/codedge/issues"
-  },
-  "homepage": "https://github.com/aledtr77/codedge#readme",
   "devDependencies": {
     "cheerio": "^1.1.2",
-    "csso": "^5.0.5",
     "html-minifier-terser": "^7.2.0",
-    "prettier": "^3.6.2",
-    "prettier-plugin-xml": "^0.1.0",
-    "terser": "^5.43.1"
+    "terser": "^5.44.0",
+    "clean-css": "^5.3.3"
   }
 }
