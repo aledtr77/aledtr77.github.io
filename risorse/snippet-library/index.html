@@ -1,492 +1,4 @@
-<!DOCTYPE html><html lang="it"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Snippet Library HTML/CSS/JS - Codedge</title>
-    <meta name="description" content="Raccolta di snippet HTML, CSS e JavaScript pronti all'uso: copia, incolla e personalizza per velocizzare lo sviluppo.">
-    <link rel="canonical" href="https://codedge.it/risorse/snippet-library/">
-    <link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml">
-    <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png">
-    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF">
-    <meta name="theme-color" content="#00A8FF">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
-    <link rel="preload" as="style" href="/css/components/main.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/components/main.css"
-    /></noscript>
-    <link rel="preload" as="style" href="/css/components/navbar.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/components/navbar.css"
-    /></noscript>
-    <link rel="preload" as="style" href="/css/components/footer.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/components/footer.css"
-    /></noscript>
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" crossorigin="">
-    <noscript><link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    /></noscript>
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" onload="this.onload=null;this.rel='stylesheet'" crossorigin="">
-    <noscript><link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css"
-    /></noscript>
-    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" data-manual=""></script>
-    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-css.min.js"></script>
-    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
-    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js"></script>
-    <script defer="" src="/js/components/navbar.js"></script>
-    <script defer="" src="/js/components/footer.js"></script>
-    <script src="/js/components/navbar-loader.js"></script>
-    <style>
-      .snippet-container {
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-        background-color: var(--background-one);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .snippet-nav {
-        display: flex;
-        flex-direction: column;
-        margin-top: 60px;
-        margin-bottom: 20px;
-      }
-      .snippet-nav-item {
-        color: var(--text-color);
-        text-decoration: none;
-        padding: 0.5rem;
-        margin-bottom: 0.5rem;
-        border-radius: 4px;
-        transition:
-          background-color 0.3s ease,
-          color 0.3s ease;
-      }
-      .snippet-nav-item:focus,
-      .snippet-nav-item:hover {
-        color: var(--color-three);
-      }
-      .snippet-main {
-        flex: 1;
-        padding: 2rem;
-        margin-left: 250px;
-        overflow-x: auto;
-      }
-      .snippet-header {
-        margin-bottom: 2rem;
-      }
-      .snippet-section {
-        margin-bottom: 3rem;
-      }
-      .copy-btn,
-      .snippet-box {
-        background-color: var(--background-two);
-      }
-      .snippet-box {
-        border-radius: 8px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        overflow: hidden;
-      }
-      .snippet-box pre {
-        max-height: 100%;
-        overflow-y: unset;
-      }
-      .copy-btn {
-        border: 0;
-        color: var(--text-color);
-        font-size: 0.9em;
-        cursor: pointer;
-        transition:
-          background-color 0.3s,
-          transform 0.1s;
-      }
-      .copy-btn:hover {
-        color: var(--color-three);
-        transform: scale(1.05);
-      }
-      .copy-btn i {
-        margin-right: 6px;
-      }
-      .title-box {
-        display: flex;
-        justify-content: space-between;
-      }
-      button,
-      button i {
-        transition: all 0.3s ease;
-      }
-      button i {
-        margin-right: 5px;
-      }
-      button:active {
-        transform: scale(0.95);
-      }
-      .sidebar-toggle {
-        display: none;
-        cursor: pointer;
-        position: fixed;
-        top: 3px;
-        left: 25px;
-        z-index: 1001;
-        background: 0 0;
-        border: 0;
-        width: 30px;
-        height: 30px;
-        padding: 0;
-      }
-      .sidebar-toggle .bar-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin-top: 1px;
-      }
-      .sidebar-toggle .bar {
-        position: absolute;
-        left: 0;
-        width: 30px;
-        height: 3px;
-        background-color: var(--text-color);
-        transition: all 0.3s;
-      }
-      .sidebar-toggle .bar:first-child {
-        top: 20%;
-      }
-      .sidebar-toggle .bar:nth-child(2) {
-        top: 45%;
-      }
-      .sidebar-toggle .bar:nth-child(3) {
-        bottom: 20%;
-      }
-      .sidebar-toggle.active .bar:first-child {
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-      }
-      .sidebar-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      .sidebar-toggle.active .bar:nth-child(3) {
-        bottom: 50%;
-        transform: translateY(50%) rotate(-45deg);
-      }
-      h2 {
-        font-size: 1.5rem;
-        margin-left: 500px;
-      }
-      @media (max-width: 1180px) {
-        h2 {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip-path: inset(50%);
-          clip: rect(0 0 0 0);
-          white-space: nowrap;
-          border: 0;
-        }
-      }
-      .clickable-item {
-        color: var(--text-color);
-        transition: color 0.3s ease;
-        cursor: pointer;
-        padding: 2px 0;
-        margin-left: 35px;
-        text-decoration: none;
-        font-weight: 500;
-        line-height: 2;
-        list-style-type: none;
-      }
-      .clickable-item:hover {
-        color: var(--color-three);
-        text-decoration: underline;
-        transition: 0.3s;
-      }
-      .type-group {
-        font-size: 20px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-      .list-menu {
-        margin-bottom: 15px;
-      }
-      .list-menu:hover {
-        transition: 0.3s;
-        color: #3b3be8;
-      }
-      .tune-list {
-        list-style-type: none;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      @media (max-width: 768px) {
-        h1 {
-          display: none;
-        }
-        .sidebar-toggle {
-          display: block;
-        }
-        body {
-          overflow: auto;
-        }
-        .snippet-container {
-          flex-direction: column;
-        }
-        .snippet-sidebar {
-          width: 200px;
-          transform: translateX(-100%);
-          position: fixed;
-          top: 10px;
-          left: 0;
-          height: 100%;
-          overflow-y: auto;
-        }
-        .snippet-main {
-          margin-left: 0;
-          width: 100%;
-        }
-        .snippet-container.show-sidebar .snippet-sidebar {
-          transform: translateX(0);
-        }
-      }
-      .spacer {
-        height: 60px;
-      }
-      .navbar .resize-text {
-        font-size: 2rem;
-        margin: 0;
-      }
-      .snippet-sidebar {
-        min-width: 250px;
-        background-color: var(--background-one);
-        padding: 1rem;
-        position: fixed;
-        top: 140px;
-        left: 0;
-        max-height: calc(100vh - 140px);
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-      .snippet-sidebar::-webkit-scrollbar {
-        width: 8px;
-      }
-      .snippet-sidebar::-webkit-scrollbar-track {
-        background: var(--background-one);
-      }
-      .snippet-sidebar::-webkit-scrollbar-thumb {
-        background-color: var(--color-three);
-        border-radius: 4px;
-      }
-      .snippet-sidebar::-webkit-scrollbar-thumb:hover {
-        background-color: var(--text-color);
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="navbar-container">
-          <img src="/assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35">
-          <h1 class="resize-text">
-            <i class="fas fa-code" aria-hidden="true"></i> Snippet Library
-            HTML/CSS/JS
-          </h1>
-          <div class="menu-icon">
-            <span class="bar"></span> <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul id="nav-menu" class="nav-menu"></ul>
-        </div>
-      </nav>
-      <div id="breadcrumb-container" aria-hidden="false"></div>
-      <script src="/js/components/breadcrumb-loader.js" defer=""></script>
-      <h2>Snippet HTML, CSS e JavaScript pronti all'uso</h2>
-    </header>
-    <div class="content-wrapper snippet-container">
-      <div class="sidebar-toggle">
-        <div class="bar-container">
-          <span class="bar"></span> <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </div>
-      <aside class="snippet-sidebar">
-        <nav class="snippet-nav">
-          <details>
-            <summary class="list-menu">
-              <span class="type-group">HTML</span>
-            </summary>
-            <ul class="tune-list">
-              <li>
-                <a href="#html-boilerplate" class="clickable-item">1. HTML Boilerplate</a>
-              </li>
-              <li><a href="#form" class="clickable-item">2. Form</a></li>
-              <li>
-                <a href="#add-image" class="clickable-item">3. Add Image</a>
-              </li>
-              <li>
-                <a href="#html-video" class="clickable-item">4. HTML Video</a>
-              </li>
-              <li>
-                <a href="#hyperlinks" class="clickable-item">5. Hyperlinks</a>
-              </li>
-              <li>
-                <a href="#table-section" class="clickable-item">6. Table Section</a>
-              </li>
-              <li><a href="#list" class="clickable-item">7. List Ul Ol</a></li>
-              <li>
-                <a href="#button-input" class="clickable-item">8. Button &amp; Input</a>
-              </li>
-              <li>
-                <a href="#element-bi" class="clickable-item">9. Element Block Inline</a>
-              </li>
-              <li><a href="#anchors" class="clickable-item">10. Anchors</a></li>
-              <li>
-                <a href="#embed-maps" class="clickable-item">11. Embed Maps</a>
-              </li>
-              <li>
-                <a href="#youtube-iframe" class="clickable-item">12. Youtube Iframe</a>
-              </li>
-              <li>
-                <a href="#select-dropdown" class="clickable-item">13. Select Dropdown</a>
-              </li>
-              <li>
-                <a href="#details-summary" class="clickable-item">14. Details Summary</a>
-              </li>
-            </ul>
-          </details>
-          <details>
-            <summary class="list-menu">
-              <span class="type-group">CSS</span>
-            </summary>
-            <ul class="tune-list">
-              <li>
-                <a href="#reset-css" class="clickable-item">1. Reset CSS</a>
-              </li>
-              <li>
-                <a href="#flexbox-layout" class="clickable-item">2. Flexbox Layout</a>
-              </li>
-              <li>
-                <a href="#grid-layout" class="clickable-item">3. Grid Layout</a>
-              </li>
-              <li>
-                <a href="#css-variables" class="clickable-item">4. CSS Variables</a>
-              </li>
-              <li>
-                <a href="#media-queries" class="clickable-item">5. Media Queries</a>
-              </li>
-              <li><a href="#hover" class="clickable-item">6. Hover</a></li>
-              <li>
-                <a href="#sticky-header" class="clickable-item">7. Sticky Header</a>
-              </li>
-              <li>
-                <a href="#scrollbar" class="clickable-item">8. Scrollbar</a>
-              </li>
-              <li>
-                <a href="#modal-overlay" class="clickable-item">9. Modal Overlay</a>
-              </li>
-              <li>
-                <a href="#lazy-loading" class="clickable-item">10. Lazy Loading</a>
-              </li>
-              <li>
-                <a href="#fading-effect" class="clickable-item">11. Fading Effect</a>
-              </li>
-              <li>
-                <a href="#dark-mode" class="clickable-item">12. Dark Mode</a>
-              </li>
-              <li>
-                <a href="#text-ellipsis" class="clickable-item">13. Text Ellipsis</a>
-              </li>
-              <li>
-                <a href="#keyframe-animations" class="clickable-item">14. Keyframe Animations</a>
-              </li>
-            </ul>
-          </details>
-          <details>
-            <summary class="list-menu">
-              <span class="type-group">JavaScript</span>
-            </summary>
-            <ul class="tune-list">
-              <li>
-                <a href="#event-listener" class="clickable-item">1. Event Listener</a>
-              </li>
-              <li>
-                <a href="#toggle-class" class="clickable-item">2. Toggle Class</a>
-              </li>
-              <li>
-                <a href="#debounce-function" class="clickable-item">3. Debounce Function</a>
-              </li>
-              <li>
-                <a href="#throttling" class="clickable-item">4. Throttling</a>
-              </li>
-              <li>
-                <a href="#fetch-api" class="clickable-item">5. Fetch API</a>
-              </li>
-              <li>
-                <a href="#async-await" class="clickable-item">6. Async/Await</a>
-              </li>
-              <li>
-                <a href="#local-storage" class="clickable-item">7. Local Storage</a>
-              </li>
-              <li>
-                <a href="#form-validation" class="clickable-item">8. Form Validation</a>
-              </li>
-              <li>
-                <a href="#scroll-to-element" class="clickable-item">9. Scroll to Element</a>
-              </li>
-              <li>
-                <a href="#iife" class="clickable-item">10. Modulo IIFE</a>
-              </li>
-              <li>
-                <a href="#dynamic-element" class="clickable-item">11. Dynamic Element</a>
-              </li>
-              <li>
-                <a href="#toggle-dark-mode" class="clickable-item">12. Toggle Dark Mode</a>
-              </li>
-              <li>
-                <a href="#array-method" class="clickable-item">13. Array Method</a>
-              </li>
-              <li>
-                <a href="#date-management" class="clickable-item">14. Date Management</a>
-              </li>
-            </ul>
-          </details>
-          <details>
-            <summary class="list-menu">
-              <span class="type-group">UI Components</span>
-            </summary>
-            <ul class="tune-list">
-              <li>
-                <a href="#scroll-indicator" class="clickable-item">1. Scroll Indicator</a>
-              </li>
-              <li>
-                <a href="#card--interattive" class="clickable-item">2. Card Interattive</a>
-              </li>
-              <li>
-                <a href="#minimal-navbar" class="clickable-item">3. Minimal Navbar</a>
-              </li>
-              <li>
-                <a href="#form-effetti-resize" class="clickable-item">4. Form Effetti Resize</a>
-              </li>
-            </ul>
-          </details>
-        </nav>
-      </aside>
-      <main class="snippet-main">
-        <section id="html-snippets" class="snippet-section">
-          <div style="padding-top: 80px" id="html-boilerplate" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>1. Struttura di base di una pagina HTML</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Snippet Library HTML/CSS/JS - Codedge</title><meta name="description" content="Raccolta di snippet HTML, CSS e JavaScript pronti all'uso: copia, incolla e personalizza per velocizzare lo sviluppo."><link rel="canonical" href="https://codedge.it/risorse/snippet-library/"><link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml"><link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF"><meta name="theme-color" content="#00A8FF"><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin=""><link rel="preload" as="style" href="/css/components/main.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/components/main.css"></noscript><link rel="preload" as="style" href="/css/components/navbar.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/components/navbar.css"></noscript><link rel="preload" as="style" href="/css/components/footer.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/components/footer.css"></noscript><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" crossorigin=""><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" onload="this.onload=null;this.rel='stylesheet'" crossorigin=""><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css"></noscript><script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" data-manual=""></script><script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-css.min.js"></script><script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script><script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js"></script><script defer="" src="/js/components/navbar.js"></script><script defer="" src="/js/components/footer.js"></script><script src="/js/components/navbar-loader.js"></script><style>.snippet-container{display:flex;width:100%;margin:0 auto;background-color:var(--background-one);border-radius:8px;overflow:hidden}.snippet-nav{display:flex;flex-direction:column;margin-top:60px;margin-bottom:20px}.snippet-nav-item{color:var(--text-color);text-decoration:none;padding:.5rem;margin-bottom:.5rem;border-radius:4px;transition:background-color .3s ease,color .3s ease}.snippet-nav-item:focus,.snippet-nav-item:hover{color:var(--color-three)}.snippet-main{flex:1;padding:2rem;margin-left:250px;overflow-x:auto}.snippet-header{margin-bottom:2rem}.snippet-section{margin-bottom:3rem}.copy-btn,.snippet-box{background-color:var(--background-two)}.snippet-box{border-radius:8px;padding:1rem;margin-bottom:1rem;overflow:hidden}.snippet-box pre{max-height:100%;overflow-y:unset}.copy-btn{border:0;color:var(--text-color);font-size:.9em;cursor:pointer;transition:background-color .3s,transform .1s}.copy-btn:hover{color:var(--color-three);transform:scale(1.05)}.copy-btn i{margin-right:6px}.title-box{display:flex;justify-content:space-between}button,button i{transition:all .3s ease}button i{margin-right:5px}button:active{transform:scale(.95)}.sidebar-toggle{display:none;cursor:pointer;position:fixed;top:3px;left:25px;z-index:1001;background:0 0;border:0;width:30px;height:30px;padding:0}.sidebar-toggle .bar-container{position:relative;width:100%;height:100%;margin-top:1px}.sidebar-toggle .bar{position:absolute;left:0;width:30px;height:3px;background-color:var(--text-color);transition:all .3s}.sidebar-toggle .bar:first-child{top:20%}.sidebar-toggle .bar:nth-child(2){top:45%}.sidebar-toggle .bar:nth-child(3){bottom:20%}.sidebar-toggle.active .bar:first-child{top:50%;transform:translateY(-50%) rotate(45deg)}.sidebar-toggle.active .bar:nth-child(2){opacity:0}.sidebar-toggle.active .bar:nth-child(3){bottom:50%;transform:translateY(50%) rotate(-45deg)}h2{font-size:1.5rem;margin-left:500px}@media (max-width:1180px){h2{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);clip:rect(0 0 0 0);white-space:nowrap;border:0}}.clickable-item{color:var(--text-color);transition:color .3s ease;cursor:pointer;padding:2px 0;margin-left:35px;text-decoration:none;font-weight:500;line-height:2;list-style-type:none}.clickable-item:hover{color:var(--color-three);text-decoration:underline;transition:.3s}.type-group{font-size:20px;font-weight:600;cursor:pointer}.list-menu{margin-bottom:15px}.list-menu:hover{transition:.3s;color:#3b3be8}.tune-list{list-style-type:none;margin-top:10px;margin-bottom:10px}@media (max-width:768px){h1{display:none}.sidebar-toggle{display:block}body{overflow:auto}.snippet-container{flex-direction:column}.snippet-sidebar{width:200px;transform:translateX(-100%);position:fixed;top:10px;left:0;height:100%;overflow-y:auto}.snippet-main{margin-left:0;width:100%}.snippet-container.show-sidebar .snippet-sidebar{transform:translateX(0)}}.spacer{height:60px}.navbar .resize-text{font-size:2rem;margin:0}.snippet-sidebar{min-width:250px;background-color:var(--background-one);padding:1rem;position:fixed;top:140px;left:0;max-height:calc(100vh - 140px);overflow-y:auto;overflow-x:hidden}.snippet-sidebar::-webkit-scrollbar{width:8px}.snippet-sidebar::-webkit-scrollbar-track{background:var(--background-one)}.snippet-sidebar::-webkit-scrollbar-thumb{background-color:var(--color-three);border-radius:4px}.snippet-sidebar::-webkit-scrollbar-thumb:hover{background-color:var(--text-color)}</style></head><body><header><nav class="navbar"><div class="navbar-container"><img src="/assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35"><h1 class="resize-text"><i class="fas fa-code" aria-hidden="true"></i> Snippet Library HTML/CSS/JS</h1><div class="menu-icon"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span></div><ul id="nav-menu" class="nav-menu"></ul></div></nav><div id="breadcrumb-container" aria-hidden="false"></div><script src="/js/components/breadcrumb-loader.js" defer=""></script><h2>Snippet HTML, CSS e JavaScript pronti all'uso</h2></header><div class="content-wrapper snippet-container"><div class="sidebar-toggle"><div class="bar-container"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span></div></div><aside class="snippet-sidebar"><nav class="snippet-nav"><details><summary class="list-menu"><span class="type-group">HTML</span></summary><ul class="tune-list"><li><a href="#html-boilerplate" class="clickable-item">1. HTML Boilerplate</a></li><li><a href="#form" class="clickable-item">2. Form</a></li><li><a href="#add-image" class="clickable-item">3. Add Image</a></li><li><a href="#html-video" class="clickable-item">4. HTML Video</a></li><li><a href="#hyperlinks" class="clickable-item">5. Hyperlinks</a></li><li><a href="#table-section" class="clickable-item">6. Table Section</a></li><li><a href="#list" class="clickable-item">7. List Ul Ol</a></li><li><a href="#button-input" class="clickable-item">8. Button &amp; Input</a></li><li><a href="#element-bi" class="clickable-item">9. Element Block Inline</a></li><li><a href="#anchors" class="clickable-item">10. Anchors</a></li><li><a href="#embed-maps" class="clickable-item">11. Embed Maps</a></li><li><a href="#youtube-iframe" class="clickable-item">12. Youtube Iframe</a></li><li><a href="#select-dropdown" class="clickable-item">13. Select Dropdown</a></li><li><a href="#details-summary" class="clickable-item">14. Details Summary</a></li></ul></details><details><summary class="list-menu"><span class="type-group">CSS</span></summary><ul class="tune-list"><li><a href="#reset-css" class="clickable-item">1. Reset CSS</a></li><li><a href="#flexbox-layout" class="clickable-item">2. Flexbox Layout</a></li><li><a href="#grid-layout" class="clickable-item">3. Grid Layout</a></li><li><a href="#css-variables" class="clickable-item">4. CSS Variables</a></li><li><a href="#media-queries" class="clickable-item">5. Media Queries</a></li><li><a href="#hover" class="clickable-item">6. Hover</a></li><li><a href="#sticky-header" class="clickable-item">7. Sticky Header</a></li><li><a href="#scrollbar" class="clickable-item">8. Scrollbar</a></li><li><a href="#modal-overlay" class="clickable-item">9. Modal Overlay</a></li><li><a href="#lazy-loading" class="clickable-item">10. Lazy Loading</a></li><li><a href="#fading-effect" class="clickable-item">11. Fading Effect</a></li><li><a href="#dark-mode" class="clickable-item">12. Dark Mode</a></li><li><a href="#text-ellipsis" class="clickable-item">13. Text Ellipsis</a></li><li><a href="#keyframe-animations" class="clickable-item">14. Keyframe Animations</a></li></ul></details><details><summary class="list-menu"><span class="type-group">JavaScript</span></summary><ul class="tune-list"><li><a href="#event-listener" class="clickable-item">1. Event Listener</a></li><li><a href="#toggle-class" class="clickable-item">2. Toggle Class</a></li><li><a href="#debounce-function" class="clickable-item">3. Debounce Function</a></li><li><a href="#throttling" class="clickable-item">4. Throttling</a></li><li><a href="#fetch-api" class="clickable-item">5. Fetch API</a></li><li><a href="#async-await" class="clickable-item">6. Async/Await</a></li><li><a href="#local-storage" class="clickable-item">7. Local Storage</a></li><li><a href="#form-validation" class="clickable-item">8. Form Validation</a></li><li><a href="#scroll-to-element" class="clickable-item">9. Scroll to Element</a></li><li><a href="#iife" class="clickable-item">10. Modulo IIFE</a></li><li><a href="#dynamic-element" class="clickable-item">11. Dynamic Element</a></li><li><a href="#toggle-dark-mode" class="clickable-item">12. Toggle Dark Mode</a></li><li><a href="#array-method" class="clickable-item">13. Array Method</a></li><li><a href="#date-management" class="clickable-item">14. Date Management</a></li></ul></details><details><summary class="list-menu"><span class="type-group">UI Components</span></summary><ul class="tune-list"><li><a href="#scroll-indicator" class="clickable-item">1. Scroll Indicator</a></li><li><a href="#card--interattive" class="clickable-item">2. Card Interattive</a></li><li><a href="#minimal-navbar" class="clickable-item">3. Minimal Navbar</a></li><li><a href="#form-effetti-resize" class="clickable-item">4. Form Effetti Resize</a></li></ul></details></nav></aside><main class="snippet-main"><section id="html-snippets" class="snippet-section"><div style="padding-top: 80px" id="html-boilerplate" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>1. Struttura di base di una pagina HTML</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="it"&gt;
     &lt;head&gt;
@@ -500,17 +12,7 @@
     &lt;p&gt;Questa è la struttura di base di una pagina HTML.&lt;/p&gt; &lt;!-- Paragrafo di testo --&gt;
     &lt;/body&gt;
 &lt;/html&gt;                        
-                    </code></pre>
-          </div>
-          <div id="form" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>2. Form Semplice</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="form" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>2. Form Semplice</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;form action="/submit" method="POST"&gt; &lt;!-- Inizia un form con metodo POST --&gt;
     &lt;label for="name"&gt;Nome:&lt;/label&gt; &lt;!-- Etichetta per il campo nome --&gt;
     &lt;input type="text" id="name" name="name" required&gt; &lt;!-- Campo di testo per il nome con attributo required --&gt;
@@ -520,46 +22,16 @@
     
     &lt;input type="submit" value="Invia"&gt; &lt;!-- Bottone di invio del form --&gt;
     &lt;/form&gt; 
-                    </code></pre>
-          </div>
-          <div id="add-image" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>3. Aggiunta di immagini</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="add-image" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>3. Aggiunta di immagini</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!-- Inserisce un'immagine con descrizione alternativa e dimensioni specificate --&gt;
     &lt;img src="immagine.jpg" alt="Descrizione dell'immagine" width="400" height="300"&gt;    
-                    </code></pre>
-          </div>
-          <div id="html-video" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>4. Video HTML5</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="html-video" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>4. Video HTML5</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!-- Integrazione di un video con controlli di riproduzione --&gt;
     &lt;video width="320" height="240" controls&gt;
         &lt;source src="video.mp4" type="video/mp4"&gt; &lt;!-- Indica il file e il tipo di video --&gt;
         Il tuo browser non supporta il tag video. &lt;!-- Messaggio mostrato se il video non è supportato --&gt;
     &lt;/video&gt;
-                    </code></pre>
-          </div>
-          <div id="hyperlinks" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>5. Collegamenti ipertestuali</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="hyperlinks" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>5. Collegamenti ipertestuali</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!-- Collegamento a una pagina esterna con apertura in una nuova scheda --&gt;
     &lt;a href="https://www.google.com" target="_blank"&gt;Visita Google&lt;/a&gt;
     
@@ -568,17 +40,7 @@
     
     &lt;!-- Collegamento per aprire un'email --&gt;
     &lt;a href="mailto:esempio@mail.com"&gt;Inviami un'email&lt;/a&gt;                        
-                    </code></pre>
-          </div>
-          <div id="table-section" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>6. Sezione con una tabella</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="table-section" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>6. Sezione con una tabella</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!-- Tabella con intestazione e corpo della tabella --&gt;
 &lt;table&gt;
     &lt;thead&gt;
@@ -598,17 +60,7 @@
     &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;  
-                    </code></pre>
-          </div>
-          <div id="list" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>7. Lista ordinata e non ordinata</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="list" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>7. Lista ordinata e non ordinata</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!-- Lista non ordinata --&gt;
 &lt;ul&gt;
     &lt;li&gt;Elemento 1&lt;/li&gt;
@@ -622,17 +74,7 @@
     &lt;li&gt;Elemento 2&lt;/li&gt;
     &lt;li&gt;Elemento 3&lt;/li&gt;
 &lt;/ol&gt;
-                    </code></pre>
-          </div>
-          <div id="button-input" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>8. Bottoni e input</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="button-input" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>8. Bottoni e input</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!-- Bottone semplice --&gt;
     &lt;button&gt;Premi qui&lt;/button&gt;
     
@@ -644,17 +86,7 @@
         &lt;input type="checkbox" name="consenso" value="1"&gt; &lt;!-- Checkbox per accettare condizioni --&gt;
         Accetto i termini e condizioni
     &lt;/label&gt;                        
-                    </code></pre>
-          </div>
-          <div id="element-bi" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>9. Elementi di blocco e inline</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="element-bi" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>9. Elementi di blocco e inline</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!-- Esempio di elemento blocco --&gt;
     &lt;div&gt;
         Questo è un blocco.
@@ -662,68 +94,28 @@
     
     &lt;!-- Esempio di elemento inline --&gt;
     &lt;span&gt;Questo è un testo inline.&lt;/span&gt;                              
-                    </code></pre>
-          </div>
-          <div id="anchors" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>10. Ancoraggi e collegamenti interni</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="anchors" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>10. Ancoraggi e collegamenti interni</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!-- Sezione di destinazione dell'ancoraggio --&gt;
     &lt;h2 id="sezione2"&gt;Sezione 2&lt;/h2&gt;
     &lt;p&gt;Questo è il contenuto della sezione 2.&lt;/p&gt;
     
     &lt;!-- Collegamento che scorre fino alla sezione --&gt;
     &lt;a href="#sezione2"&gt;Vai alla sezione 2&lt;/a&gt;
-                    </code></pre>
-          </div>
-          <div id="embed-maps" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>11. Embed di Google Maps</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="embed-maps" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>11. Embed di Google Maps</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!-- Integrazione di una mappa di Google tramite iframe --&gt;
 &lt;iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509607!2d144.95592831540444!3d-
     37.817209979751954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43b87e0b3b%3A0x50456752
     18ce7e33!2zTWVsYm91cm5lLCBBdXN0cmFsaWE!5e0!3m2!1sit!2sit!4v1625799864557!5m2!1sit!2sit"
     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"&gt;&lt;/iframe&gt;
-                    </code></pre>
-          </div>
-          <div id="youtube-iframe" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>12. Iframe per incorporare video YouTube</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="youtube-iframe" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>12. Iframe per incorporare video YouTube</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!-- Integrazione di un video YouTube tramite iframe --&gt;
 &lt;iframe width="560" height="315"
     src="https://www.youtube.com/embed/dQw4w9WgXcQ"
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen&gt;&lt;/iframe&gt;                       
-                    </code></pre>
-          </div>
-          <div id="select-dropdown" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>13. Campo select (dropdown)</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="select-dropdown" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>13. Campo select (dropdown)</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!-- Dropdown con opzioni --&gt;
 &lt;label for="opzione"&gt;Scegli un'opzione:&lt;/label&gt;
 &lt;select id="opzione" name="opzione"&gt;
@@ -731,35 +123,13 @@
     &lt;option value="2"&gt;Opzione 2&lt;/option&gt;
     &lt;option value="3"&gt;Opzione 3&lt;/option&gt;
 &lt;/select&gt;
-                    </code></pre>
-          </div>
-          <div id="details-summary" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>14. Tag details e summary per contenuti espandibili</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="details-summary" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>14. Tag details e summary per contenuti espandibili</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
 &lt;!-- Il tag &lt;details&gt; permette di creare una sezione espandibile --&gt;
 &lt;details&gt;
     &lt;summary&gt;Clicca per espandere i dettagli&lt;/summary&gt; &lt;!-- Testo che l'utente vedrà prima di espandere --&gt;
     &lt;p&gt;Questo è il contenuto nascosto che verrà mostrato una volta espanso.&lt;/p&gt; &lt;!-- Contenuto nascosto all'inizio --&gt;
 &lt;/details&gt;
-                    </code></pre>
-          </div>
-        </section>
-        <section id="css-snippets" class="snippet-section">
-          <div id="reset-css" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>1. Reset CSS</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div></section><section id="css-snippets" class="snippet-section"><div id="reset-css" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>1. Reset CSS</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Reset CSS - Azzera margini e padding predefiniti e imposta box-sizing */
     *,
     *::before,
@@ -778,17 +148,7 @@
         line-height: 1.5; /* Imposta un'altezza di linea standard */
         font-family: sans-serif; /* Usa un font senza grazie come predefinito */
     }                        
-                    </code></pre>
-          </div>
-          <div id="flexbox-layout" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>2. Flexbox Layout</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="flexbox-layout" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>2. Flexbox Layout</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Contenitore flexbox che centra l'elemento figlio orizzontalmente e verticalmente */
     .container {
         display: flex; /* Attiva il layout flexbox */
@@ -796,17 +156,7 @@
         align-items: center; /* Centra l'elemento figlio verticalmente */
         height: 100vh; /* Imposta l'altezza del contenitore al 100% della viewport */
     }                        
-                    </code></pre>
-          </div>
-          <div id="grid-layout" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>3. Grid Layout</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="grid-layout" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>3. Grid Layout</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Layout a griglia che si adatta automaticamente alla larghezza del contenitore */
     .grid-container {
         display: grid; /* Attiva il layout grid */
@@ -814,17 +164,7 @@
         /* Genera tante colonne da riempire automaticamente con un minimo di 200px */
         gap: 20px; /* Spazio tra gli elementi della griglia */
     }
-                    </code></pre>
-          </div>
-          <div id="css-variables" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>4. CSS Variables (Custom Properties)</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="css-variables" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>4. CSS Variables (Custom Properties)</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     :root {
         /* Definizione delle variabili globali */
         --main-bg-color: #f0f0f0; /* Colore di sfondo principale */
@@ -837,34 +177,14 @@
         color: var(--primary-color); /* Applica il colore del testo */
         font-size: var(--font-size-large); /* Imposta la dimensione del font */
     }                        
-                    </code></pre>
-          </div>
-          <div id="media-queries" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>5. Media Queries Responsive</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="media-queries" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>5. Media Queries Responsive</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Modifica del layout per schermi con larghezza inferiore a 768px */
     @media (max-width: 768px) {
         .container {
             flex-direction: column; /* Dispone gli elementi in una colonna verticale su schermi piccoli */
         }
     }
-                    </code></pre>
-          </div>
-          <div id="hover" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>6. Hover con Transizioni</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="hover" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>6. Hover con Transizioni</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Bottone con transizione per il cambio di colore al passaggio del mouse */
     .button {
         background-color: #3498db; /* Colore di sfondo iniziale */
@@ -876,17 +196,7 @@
     .button:hover {
         background-color: #2980b9; /* Cambia il colore di sfondo al passaggio del mouse */
     }                                   
-                    </code></pre>
-          </div>
-          <div id="sticky-header" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>7. Sticky Header</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="sticky-header" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>7. Sticky Header</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Header che rimane fisso nella parte superiore della finestra */
     .header {
         position: sticky; /* Mantiene l'header in posizione quando si scrolla */
@@ -894,17 +204,7 @@
         background-color: white; /* Colore di sfondo dell'header */
         z-index: 1000; /* Assicura che l'header sia visibile sopra altri contenuti */
     }                        
-                    </code></pre>
-          </div>
-          <div id="scrollbar" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>8. Scrollbar Personalizzata</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="scrollbar" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>8. Scrollbar Personalizzata</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Scrollbar personalizzata */
     ::-webkit-scrollbar {
         width: 10px; /* Larghezza della scrollbar */
@@ -919,17 +219,7 @@
         border-radius: 10px; /* Bordo arrotondato per la barra */
         border: 2px solid #f0f0f0; /* Spazio vuoto attorno alla scrollbar */
     }                                              
-                    </code></pre>
-          </div>
-          <div id="modal-overlay" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>9. Overlay con Modal</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="modal-overlay" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>9. Overlay con Modal</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Overlay che copre tutta la finestra */
     .overlay {
         position: fixed; /* Fissa l'overlay sopra tutti i contenuti */
@@ -953,17 +243,7 @@
         max-width: 400px; /* Larghezza massima della modal */
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra alla modal */
     }                        
-                    </code></pre>
-          </div>
-          <div id="lazy-loading" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>10. Caricamento Lazy delle Immagini</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="lazy-loading" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>10. Caricamento Lazy delle Immagini</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Aggiungere loading="lazy" all'HTML per abilitare il lazy loading */
     img {
         display: block; /* Evita spazi vuoti sotto le immagini */
@@ -971,17 +251,7 @@
         height: auto; /* Mantiene proporzioni */
         object-fit: cover; /* Assicura che l'immagine riempia il contenitore */
     }                                                       
-                    </code></pre>
-          </div>
-          <div id="fading-effect" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>11. Effetto di Fading per le Immagini</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="fading-effect" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>11. Effetto di Fading per le Immagini</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Applica transizione al caricamento dell'immagine */
     img {
         opacity: 0; /* L'immagine inizia invisibile */
@@ -991,17 +261,7 @@
     img.loaded {
         opacity: 1; /* Una volta caricata, l'immagine diventa completamente visibile */
     }
-                    </code></pre>
-          </div>
-          <div id="dark-mode" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>12. Dark Mode</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="dark-mode" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>12. Dark Mode</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Modalità dark per utenti che preferiscono il tema scuro */
     @media (prefers-color-scheme: dark) {
         body {
@@ -1013,17 +273,7 @@
             color: #bb86fc; /* Colore del link nel tema scuro */
         }
     }                                               
-                    </code></pre>
-          </div>
-          <div id="text-ellipsis" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>13. Text Ellipsis (Testo Troncato con ...)</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="text-ellipsis" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>13. Text Ellipsis (Testo Troncato con ...)</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Testo tronca con "..." se eccede la larghezza disponibile */
     .truncate {
         white-space: nowrap; /* Mantiene il testo su una singola riga */
@@ -1031,17 +281,7 @@
         text-overflow: ellipsis; /* Aggiunge "..." per indicare il troncamento */
         width: 100%; /* Assicura che l'elemento abbia una larghezza definita */
     }              
-                    </code></pre>
-          </div>
-          <div id="keyframe-animations" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>14. Keyframe Animations</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-css">
+                    </code></pre></div><div id="keyframe-animations" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>14. Keyframe Animations</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-css">
     /* Definizione di una keyframe animation chiamata "shake" */
     @keyframes shake {
         0% { transform: translateX(0); } /* Posizione iniziale */
@@ -1055,35 +295,13 @@
     .shake {
         animation: shake 0.5s ease-in-out; /* Esegui l'animazione in 0.5s con un'entrata e uscita morbida */
     }                                        
-                    </code></pre>
-          </div>
-        </section>
-        <section id="js-snippets" class="snippet-section">
-          <div id="event-listener" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>1. Event Listener</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div></section><section id="js-snippets" class="snippet-section"><div id="event-listener" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>1. Event Listener</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Aggiunge un listener per l'evento di clic al bottone
     const button = document.querySelector('.button'); // Seleziona il bottone dal DOM
     button.addEventListener('click', function() {
         alert('Bottone cliccato!'); // Mostra un avviso quando il bottone viene cliccato
     });
-                    </code></pre>
-          </div>
-          <div id="toggle-class" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>2. Toggle Class</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="toggle-class" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>2. Toggle Class</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Aggiunge o rimuove la classe 'active' quando il bottone viene cliccato
     const toggleButton = document.querySelector('.toggle-btn'); // Seleziona l'elemento
     const menu = document.querySelector('.menu'); // Seleziona il menu
@@ -1091,17 +309,7 @@
     toggleButton.addEventListener('click', function() {
         menu.classList.toggle('active'); // Aggiunge/rimuove la classe 'active'
     });                        
-                    </code></pre>
-          </div>
-          <div id="debounce-function" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>3. Debounce Function</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="debounce-function" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>3. Debounce Function</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Funzione debounce: esegue il codice solo se la funzione non viene chiamata entro il tempo specificato
     function debounce(func, wait) {
         let timeout; // Variabile per memorizzare il timeout
@@ -1118,17 +326,7 @@
     window.addEventListener('resize', debounce(function() {
         console.log('Ridimensionamento finestra!'); // Mostra un messaggio quando il ridimensionamento si ferma
     }, 200)); // 200 ms di attesa prima di eseguire la funzione                        
-                    </code></pre>
-          </div>
-          <div id="throttling" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>4. Throttling</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="throttling" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>4. Throttling</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Funzione throttle: limita l'esecuzione a intervalli regolari
     function throttle(func, limit) {
         let inThrottle; // Variabile per controllare se siamo in attesa
@@ -1146,33 +344,13 @@
     window.addEventListener('scroll', throttle(function() {
         console.log('Scroll rilevato!'); // Esegue l'azione a intervalli regolari durante lo scroll
     }, 100)); // Limita l'esecuzione a una volta ogni 100 ms  
-                    </code></pre>
-          </div>
-          <div id="fetch-api" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>5. Fetch API</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="fetch-api" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>5. Fetch API</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Esegue una richiesta GET a un'API e gestisce la risposta
     fetch('https://jsonplaceholder.typicode.com/posts') // URL dell'API
         .then(response =&gt; response.json()) // Trasforma la risposta in JSON
         .then(data =&gt; console.log(data)) // Log dei dati ottenuti
         .catch(error =&gt; console.error('Errore:', error)); // Gestisce gli errori della richiesta
-                    </code></pre>
-          </div>
-          <div id="async-await" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>6. Async/Await</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="async-await" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>6. Async/Await</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Funzione asincrona che usa fetch per ottenere dati da un'API
     async function fetchData() {
         try {
@@ -1185,17 +363,7 @@
     }
     
     fetchData(); // Esegue la funzione                     
-                    </code></pre>
-          </div>
-          <div id="local-storage" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>7. Local Storage</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="local-storage" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>7. Local Storage</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Salva un valore nel local storage
     localStorage.setItem('username', 'JohnDoe'); // Memorizza la stringa 'JohnDoe' sotto la chiave 'username'
     
@@ -1205,17 +373,7 @@
     
     // Rimuove un elemento dal local storage
     localStorage.removeItem('username'); // Rimuove l'elemento con chiave 'username'                                              
-                    </code></pre>
-          </div>
-          <div id="form-validation" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>8. Form Validation</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="form-validation" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>8. Form Validation</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Validazione di un campo form al submit
     const form = document.querySelector('form'); // Seleziona il form
     
@@ -1226,82 +384,32 @@
             alert('Inserisci una email valida!'); // Mostra un messaggio di errore
         }
     });             
-                    </code></pre>
-          </div>
-          <div id="scroll-to-element" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>9. Scroll to Element</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="scroll-to-element" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>9. Scroll to Element</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Scorre fino a un elemento specifico con animazione smooth
     const scrollToSection = document.querySelector('#section'); // Seleziona la sezione
     
     document.querySelector('.scroll-btn').addEventListener('click', function() {
         scrollToSection.scrollIntoView({ behavior: 'smooth' }); // Effettua uno scroll fluido alla sezione
     });
-                    </code></pre>
-          </div>
-          <div id="iife" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>10. IIFE (Immediately Invoked Function Expression)</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="iife" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>10. IIFE (Immediately Invoked Function Expression)</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // IIFE (Immediately Invoked Function Expression)
     (function() {
         const message = 'IIFE è stata eseguita immediatamente'; // Variabile locale
         console.log(message); // Mostra il messaggio
     })(); // La funzione viene eseguita immediatamente                           
-                    </code></pre>
-          </div>
-          <div id="dynamic-element" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>11. Dynamic Element</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="dynamic-element" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>11. Dynamic Element</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Crea e aggiunge un nuovo elemento al DOM
     const newElement = document.createElement('div'); // Crea un nuovo div
     newElement.textContent = 'Sono un nuovo elemento'; // Aggiunge il contenuto di testo
     document.body.appendChild(newElement); // Aggiunge il nuovo elemento al body della pagina                                            
-                    </code></pre>
-          </div>
-          <div id="toggle-dark-mode" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>12. Toggle Dark Mode</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="toggle-dark-mode" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>12. Toggle Dark Mode</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Alterna la modalità scura/chiara
     const toggleDarkMode = document.querySelector('.dark-mode-toggle'); // Seleziona il pulsante per il dark mode
     
     toggleDarkMode.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode'); // Aggiunge o rimuove la classe 'dark-mode'
     });                                   
-                    </code></pre>
-          </div>
-          <div id="array-method" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>13. Array Methods (map, filter, reduce)</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="array-method" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>13. Array Methods (map, filter, reduce)</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     const numbers = [1, 2, 3, 4, 5];
 
     // Esempio con map: moltiplica ogni elemento per 2
@@ -1315,33 +423,11 @@
     // Esempio con reduce: somma tutti i numeri
     const sum = numbers.reduce((total, number) =&gt; total + number, 0);
     console.log(sum); // Stampa 15                        
-                    </code></pre>
-          </div>
-          <div id="date-management" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>14. Date Management</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-javascript">
+                    </code></pre></div><div id="date-management" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>14. Date Management</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-javascript">
     // Ottenere la data corrente
     const today = new Date();
     console.log(today.toDateString()); // Stampa la data in un formato leggibile                                            
-                    </code></pre>
-          </div>
-        </section>
-        <section id="ui-snippets" class="snippet-section">
-          <div id="scroll-indicator" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3 id="scroll-indicator">1. Scroll Indicator</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div></section><section id="ui-snippets" class="snippet-section"><div id="scroll-indicator" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3 id="scroll-indicator">1. Scroll Indicator</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!DOCTYPE html&gt;
     &lt;html lang="en"&gt;
     
@@ -1500,17 +586,7 @@
     &lt;/body&gt;
     
     &lt;/html&gt;
-                    </code></pre>
-          </div>
-          <div id="card--interattive" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>2. Card Interattive</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="card--interattive" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>2. Card Interattive</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!DOCTYPE html&gt;
     &lt;html lang="it"&gt;
     
@@ -1705,17 +781,7 @@
     &lt;/body&gt;
     
     &lt;/html&gt;    
-                    </code></pre>
-          </div>
-          <div id="minimal-navbar" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>3. Minimal Navbar</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="minimal-navbar" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>3. Minimal Navbar</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
     &lt;!DOCTYPE html&gt;
     &lt;html lang="it"&gt;
     
@@ -1891,17 +957,7 @@
 &lt;/body&gt;
 
 &lt;/html&gt; 
-                    </code></pre>
-          </div>
-          <div id="form-effetti-resize" class="spacer"></div>
-          <div class="snippet-box">
-            <div class="title-box">
-              <h3>4. Form Effetti Resize</h3>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <i class="fas fa-copy"></i> Copia
-              </button>
-            </div>
-            <pre><code class="language-html">
+                    </code></pre></div><div id="form-effetti-resize" class="spacer"></div><div class="snippet-box"><div class="title-box"><h3>4. Form Effetti Resize</h3><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copia</button></div><pre><code class="language-html">
                     &lt;!DOCTYPE html&gt;
 &lt;html lang="it"&gt;
 &lt;head&gt;
@@ -2065,118 +1121,4 @@
     &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;       
-        </code></pre>
-          </div>
-        </section>
-      </main>
-    </div>
-    <script>
-      const SCROLL_OFFSET = 110;
-      function scrollToElementWithOffset(e, t = 110) {
-        if (!e) return;
-        const o = e.offsetTop - t;
-        window.scrollTo({ top: o, behavior: "smooth" });
-      }
-      function scrollToId(e, t = 110) {
-        scrollToElementWithOffset(document.getElementById(e), t);
-      }
-      function updateScrollOffset(e) {
-        ((window.SCROLL_OFFSET = e),
-          console.log(`Offset scroll aggiornato a: ${e}px`));
-      }
-      (document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('a[href^="#"]').forEach((e) => {
-          e.addEventListener("click", function (e) {
-            e.preventDefault();
-            const t = this.getAttribute("href").substring(1),
-              o = document.getElementById(t);
-            o && scrollToElementWithOffset(o);
-          });
-        });
-      }),
-        document.addEventListener("DOMContentLoaded", function () {
-          const e = document.querySelector(".snippet-sidebar");
-          e.addEventListener("wheel", function (t) {
-            (e.scrollHeight > e.clientHeight && t.stopPropagation(),
-              ((t.deltaY > 0 &&
-                e.scrollTop + e.clientHeight >= e.scrollHeight) ||
-                (t.deltaY < 0 && 0 === e.scrollTop)) &&
-                t.preventDefault());
-          });
-        }),
-        document.addEventListener("DOMContentLoaded", function () {
-          const e = document.querySelector(".sidebar-toggle"),
-            t = document.querySelector(".snippet-container");
-          (e.addEventListener("click", function () {
-            (t.classList.toggle("show-sidebar"), e.classList.toggle("active"));
-          }),
-            document.addEventListener("click", function (o) {
-              t.contains(o.target) ||
-                e.contains(o.target) ||
-                (t.classList.remove("show-sidebar"),
-                e.classList.remove("active"));
-            }));
-        }),
-        document.addEventListener("DOMContentLoaded", () => {
-          (document.querySelectorAll(".copy-btn").forEach((e) => {
-            e.addEventListener("click", () => {
-              const t = e
-                .closest(".snippet-box")
-                .querySelector("code").textContent;
-              copyToClipboard(t);
-            });
-          }),
-            document.querySelectorAll(".toggle-btn").forEach((e) => {
-              e.addEventListener("click", () => {
-                const t = e.closest(".snippet-box");
-                toggleSnippet(t);
-              });
-            }));
-        }),
-        (window.copyCode = function (e) {
-          const t = e.closest(".snippet-box").querySelector("pre"),
-            o = document.createElement("textarea");
-          ((o.value = t.textContent.trim()),
-            document.body.appendChild(o),
-            o.select());
-          try {
-            document.execCommand("copy");
-            const t = e.innerHTML,
-              o = e.querySelector("i").outerHTML;
-            ((e.innerHTML = o + " Copiato!"),
-              setTimeout(() => {
-                e.innerHTML = t;
-              }, 2e3));
-          } catch (e) {
-            console.error("Errore durante la copia:", e);
-          } finally {
-            document.body.removeChild(o);
-          }
-        }),
-        document.addEventListener("DOMContentLoaded", function () {
-          document
-            .querySelectorAll(".snippet-box .title-box button")
-            .forEach((e) => {
-              if (!e.querySelector("i")) {
-                const t = document.createElement("i");
-                ((t.className = "fas fa-copy"),
-                  e.prepend(t),
-                  (e.innerHTML = t.outerHTML + " Copia"));
-              }
-              e.setAttribute("onclick", "copyCode(this)");
-            });
-        }));
-    </script>
-    <script>
-      window.addEventListener("load", () => {
-        const run = () => {
-          window.Prism && Prism.highlightAll && Prism.highlightAll();
-        };
-        "requestIdleCallback" in window
-          ? requestIdleCallback(run)
-          : setTimeout(run, 0);
-      });
-    </script>
-  
-
-</body></html>
+        </code></pre></div></section></main></div><script>const SCROLL_OFFSET=110;function scrollToElementWithOffset(e,t=110){if(!e)return;const o=e.offsetTop-t;window.scrollTo({top:o,behavior:"smooth"})}function scrollToId(e,t=110){scrollToElementWithOffset(document.getElementById(e),t)}function updateScrollOffset(e){window.SCROLL_OFFSET=e,console.log(`Offset scroll aggiornato a: ${e}px`)}document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();const t=this.getAttribute("href").substring(1),o=document.getElementById(t);o&&scrollToElementWithOffset(o)})})}),document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".snippet-sidebar");e.addEventListener("wheel",function(t){e.scrollHeight>e.clientHeight&&t.stopPropagation(),(t.deltaY>0&&e.scrollTop+e.clientHeight>=e.scrollHeight||t.deltaY<0&&0===e.scrollTop)&&t.preventDefault()})}),document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".sidebar-toggle"),t=document.querySelector(".snippet-container");e.addEventListener("click",function(){t.classList.toggle("show-sidebar"),e.classList.toggle("active")}),document.addEventListener("click",function(o){t.contains(o.target)||e.contains(o.target)||(t.classList.remove("show-sidebar"),e.classList.remove("active"))})}),document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".copy-btn").forEach(e=>{e.addEventListener("click",()=>{const t=e.closest(".snippet-box").querySelector("code").textContent;copyToClipboard(t)})}),document.querySelectorAll(".toggle-btn").forEach(e=>{e.addEventListener("click",()=>{const t=e.closest(".snippet-box");toggleSnippet(t)})})}),window.copyCode=function(e){const t=e.closest(".snippet-box").querySelector("pre"),o=document.createElement("textarea");o.value=t.textContent.trim(),document.body.appendChild(o),o.select();try{document.execCommand("copy");const t=e.innerHTML,o=e.querySelector("i").outerHTML;e.innerHTML=o+" Copiato!",setTimeout(()=>{e.innerHTML=t},2e3)}catch(e){console.error("Errore durante la copia:",e)}finally{document.body.removeChild(o)}},document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".snippet-box .title-box button").forEach(e=>{if(!e.querySelector("i")){const t=document.createElement("i");t.className="fas fa-copy",e.prepend(t),e.innerHTML=t.outerHTML+" Copia"}e.setAttribute("onclick","copyCode(this)")})});</script><script>window.addEventListener("load",()=>{const i=()=>{window.Prism&&Prism.highlightAll&&Prism.highlightAll()};"requestIdleCallback"in window?requestIdleCallback(i):setTimeout(i,0)});</script></body></html>
