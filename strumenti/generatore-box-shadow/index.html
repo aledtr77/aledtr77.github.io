@@ -1,72 +1,28 @@
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!DOCTYPE html><html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Generatore Box Shadow - Codedge</title>
-    <meta
-      name="description"
-      content="Crea facilmente effetti ombra per i tuoi elementi con il generatore Box-Shadow CSS. Copia il codice pronto all’uso per i tuoi progetti web."
-    />
-    <link
-      rel="canonical"
-      href="https://codedge.it/strumenti/generatore-box-shadow/"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/codedge-logo-minimal.svg"
-      sizes="any"
-      type="image/svg+xml"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-192.png"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-512.png"
-      sizes="512x512"
-      type="image/png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/icons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/assets/icons/favicon-mask.svg"
-      color="#00A8FF"
-    />
-    <meta name="theme-color" content="#00A8FF" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../../css/components/main.css" />
-    <link rel="stylesheet" href="../../css/components/navbar.css" />
-    <link rel="stylesheet" href="../../css/components/button.css" />
-    <link rel="stylesheet" href="../../css/components/footer.css" />
-    <script src="../../js/components/navbar.js" defer=""></script>
-    <script src="../../js/components/button.js" defer=""></script>
-    <script src="../../js/components/footer.js"></script>
-    <script src="../../js/components/navbar-loader.js"></script>
+    <meta name="description" content="Crea facilmente effetti ombra per i tuoi elementi con il generatore Box-Shadow CSS. Copia il codice pronto all’uso per i tuoi progetti web.">
+    <link rel="canonical" href="https://codedge.it/strumenti/generatore-box-shadow/">
+    <link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF">
+    <meta name="theme-color" content="#00A8FF">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/components/main.css">
+    <link rel="stylesheet" href="/css/components/navbar.css">
+    <link rel="stylesheet" href="/css/components/button.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <script src="/js/components/navbar.js" defer=""></script>
+    <script src="/js/components/button.js" defer=""></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/navbar-loader.js"></script>
     <style>
       body {
         font-family:
@@ -229,13 +185,7 @@
     <header>
       <nav class="navbar">
         <div class="navbar-container">
-          <img
-            src="../../assets/icons/codedge-logo.svg"
-            alt="Logo codedge"
-            class="logo"
-            width="80"
-            height="35"
-          />
+          <img src="/assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35">
           <h1 class="resize-text">
             <i class="fas fa-adjust"></i> Generatore Box-Shadow CSS
           </h1>
@@ -247,7 +197,7 @@
         </div>
       </nav>
       <div id="breadcrumb-container" aria-hidden="false"></div>
-      <script src="../../js/components/breadcrumb-loader.js" defer=""></script>
+      <script src="/js/components/breadcrumb-loader.js" defer=""></script>
     </header>
     <h2>Strumento per creare ombre personalizzate in CSS</h2>
     <div class="section">
@@ -255,41 +205,29 @@
         <div class="controls">
           <div class="control-group">
             <label for="horizontal">Spostamento Orizzontale</label>
-            <input type="range" id="horizontal" min="-50" max="50" value="0" />
+            <input type="range" id="horizontal" min="-50" max="50" value="0">
             <span class="value-display" id="horizontal-value">0px</span>
           </div>
           <div class="control-group">
             <label for="vertical">Spostamento Verticale</label>
-            <input type="range" id="vertical" min="-50" max="50" value="0" />
+            <input type="range" id="vertical" min="-50" max="50" value="0">
             <span class="value-display" id="vertical-value">0px</span>
           </div>
           <div class="control-group">
             <label for="blur">Sfocatura</label>
-            <input type="range" id="blur" min="0" max="100" value="0" />
+            <input type="range" id="blur" min="0" max="100" value="0">
             <span class="value-display" id="blur-value">0px</span>
           </div>
           <div class="control-group">
             <label for="spread">Diffusione</label>
-            <input type="range" id="spread" min="-50" max="50" value="0" />
+            <input type="range" id="spread" min="-50" max="50" value="0">
             <span class="value-display" id="spread-value">0px</span>
           </div>
           <div class="control-group">
             <label for="color">Colore Ombra</label>
-            <input
-              type="color"
-              id="color"
-              value="#000000"
-              class="color-picker"
-            />
+            <input type="color" id="color" value="#000000" class="color-picker">
             <label for="opacity">Opacità ombra</label>
-            <input
-              type="range"
-              id="opacity"
-              min="0"
-              max="100"
-              value="20"
-              aria-describedby="opacity-value"
-            />
+            <input type="range" id="opacity" min="0" max="100" value="20" aria-describedby="opacity-value">
             <span class="value-display" id="opacity-value">20%</span>
           </div>
           <div class="code-output" id="css-code">
@@ -306,11 +244,11 @@
           <div class="color-controls">
             <div class="control-group">
               <label for="background-color">Colore sfondo:</label>
-              <input id="background-color" placeholder="#FFFFFF" />
+              <input id="background-color" placeholder="#FFFFFF">
             </div>
             <div class="control-group">
               <label for="object-color">Colore oggetto:</label>
-              <input id="object-color" placeholder="#3498DB" />
+              <input id="object-color" placeholder="#3498DB">
             </div>
           </div>
           <div id="outer-container"><div id="preview-box"></div></div>
@@ -392,5 +330,6 @@
       (backgroundColorInput.addEventListener("input", updateColors),
         objectColorInput.addEventListener("input", updateColors));
     </script>
-  </body>
-</html>
+  
+
+</body></html>

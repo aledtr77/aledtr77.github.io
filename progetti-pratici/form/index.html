@@ -1,103 +1,40 @@
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!DOCTYPE html><html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Form: Effetti di Resize - Codedge</title>
-    <meta
-      name="description"
-      content="Esempio di form con textarea e input che si ridimensionano automaticamente: HTML, CSS e JavaScript essenziali con codice pronto da copiare."
-    />
-    <link rel="canonical" href="https://codedge.it/progetti-pratici/form/" />
-    <link
-      rel="icon"
-      href="/assets/icons/codedge-logo-minimal.svg"
-      sizes="any"
-      type="image/svg+xml"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-192.png"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-512.png"
-      sizes="512x512"
-      type="image/png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/icons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/assets/icons/favicon-mask.svg"
-      color="#00A8FF"
-    />
-    <meta name="theme-color" content="#00A8FF" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="" />
-    <link
-      rel="preload"
-      as="style"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin=""
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
+    <meta name="description" content="Esempio di form con textarea e input che si ridimensionano automaticamente: HTML, CSS e JavaScript essenziali con codice pronto da copiare.">
+    <link rel="canonical" href="https://codedge.it/progetti-pratici/form/">
+    <link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF">
+    <meta name="theme-color" content="#00A8FF">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         crossorigin
     /></noscript>
-    <link rel="stylesheet" href="../../css/components/main.css" />
-    <link
-      rel="preload"
-      as="style"
-      href="../../css/components/navbar.css"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="../../css/components/navbar.css"
+    <link rel="stylesheet" href="/css/components/main.css">
+    <link rel="preload" as="style" href="/css/components/navbar.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/components/navbar.css"
     /></noscript>
-    <link
-      rel="preload"
-      as="style"
-      href="../../css/components/button.css"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="../../css/components/button.css"
+    <link rel="preload" as="style" href="/css/components/button.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/components/button.css"
     /></noscript>
-    <link
-      rel="preload"
-      as="style"
-      href="../../css/components/footer.css"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="../../css/components/footer.css"
+    <link rel="preload" as="style" href="/css/components/footer.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/components/footer.css"
     /></noscript>
-    <script src="../../js/components/navbar.js" defer=""></script>
-    <script src="../../js/components/button.js" defer=""></script>
-    <script src="../../js/components/footer.js"></script>
-    <script src="../../js/components/navbar-loader.js"></script>
+    <script src="/js/components/navbar.js" defer=""></script>
+    <script src="/js/components/button.js" defer=""></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/navbar-loader.js"></script>
     <style>
       @keyframes shake {
         0%,
@@ -251,13 +188,7 @@
     <header>
       <nav class="navbar">
         <div class="navbar-container">
-          <img
-            src="../../assets/icons/codedge-logo.svg"
-            alt="Logo codedge"
-            class="logo"
-            width="80"
-            height="35"
-          />
+          <img src="/assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35">
           <h1 class="resize-text">
             <i class="fas fa-list-check" aria-hidden="true"></i> Form Effetti
             Resize
@@ -270,7 +201,7 @@
         </div>
       </nav>
       <div id="breadcrumb-container" aria-hidden="false"></div>
-      <script src="../../js/components/breadcrumb-loader.js" defer=""></script>
+      <script src="/js/components/breadcrumb-loader.js" defer=""></script>
     </header>
     <h2 class="h2_resize">Form con effetti di resize: descrizione e codice</h2>
     <main>
@@ -278,15 +209,15 @@
         <h3>Invia un messaggio</h3>
         <form>
           <div class="form-group">
-            <input id="nome" required="" placeholder=" " />
+            <input id="nome" required="" placeholder=" ">
             <label for="nome">Nome</label>
           </div>
           <div class="form-group">
-            <input type="email" id="email" required="" placeholder=" " />
+            <input type="email" id="email" required="" placeholder=" ">
             <label for="email">Email</label>
           </div>
           <div class="form-group">
-            <input id="oggetto" required="" placeholder=" " />
+            <input id="oggetto" required="" placeholder=" ">
             <label for="oggetto">Oggetto</label>
           </div>
           <div class="form-group">
@@ -396,11 +327,10 @@
         <p>
           Trovate il link con il codice completo della descrizione dettagliata
           riga per riga nella sezione dedicata
-          <a href="../../risorse/snippet-library/#form-effetti-resize"
-            >UI Components.</a
-          >
+          <a href="/risorse/snippet-library#form-effetti-resize">UI Components.</a>
         </p>
       </section>
     </main>
-  </body>
-</html>
+  
+
+</body></html>

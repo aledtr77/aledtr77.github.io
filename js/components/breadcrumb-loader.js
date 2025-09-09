@@ -11,7 +11,7 @@
 
   // CONFIG
   const ENABLE_LOG = true; // true per debug in console, false in produzione
-  const FRAGMENTS_BASE = '../../includes/'; // legacy base
+  const FRAGMENTS_BASE = '/includes/'; // legacy base
   const SOURCE_PREFIX = '/html'; // non usato attivamente ma lasciato per compatibilità
   const EXTRA_CANDIDATE_PATHS = ['/includes/', '/html/includes/', '/_includes/'];
 

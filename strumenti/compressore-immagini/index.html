@@ -1,73 +1,29 @@
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!DOCTYPE html><html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Compressore immagini - Codedge</title>
-    <meta
-      name="description"
-      content="Riduci il peso delle immagini senza perdere qualità con il nostro compressore online. Ottimizza JPG PNG WebP AVIF per siti web più veloci."
-    />
-    <link
-      rel="canonical"
-      href="https://codedge.it/strumenti/compressore-immagini/"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/codedge-logo-minimal.svg"
-      sizes="any"
-      type="image/svg+xml"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-192.png"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-512.png"
-      sizes="512x512"
-      type="image/png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/icons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/assets/icons/favicon-mask.svg"
-      color="#00A8FF"
-    />
-    <meta name="theme-color" content="#00A8FF" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../../css/components/navbar.css" />
-    <link rel="stylesheet" href="../../css/components/button.css" />
-    <link rel="stylesheet" href="../../css/components/footer.css" />
-    <link rel="stylesheet" href="../../css/components/main.css" />
+    <meta name="description" content="Riduci il peso delle immagini senza perdere qualità con il nostro compressore online. Ottimizza JPG PNG WebP AVIF per siti web più veloci.">
+    <link rel="canonical" href="https://codedge.it/strumenti/compressore-immagini/">
+    <link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF">
+    <meta name="theme-color" content="#00A8FF">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/components/navbar.css">
+    <link rel="stylesheet" href="/css/components/button.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js"></script>
-    <script src="../../js/components/navbar.js" defer=""></script>
-    <script src="../../js/components/button.js" defer=""></script>
-    <script src="../../js/components/footer.js"></script>
-    <script src="../../js/components/navbar-loader.js"></script>
+    <script src="/js/components/navbar.js" defer=""></script>
+    <script src="/js/components/button.js" defer=""></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/navbar-loader.js"></script>
     <style>
       .upload-area:hover,
       body {
@@ -254,13 +210,7 @@
     <header>
       <nav class="navbar">
         <div class="navbar-container">
-          <img
-            src="../../assets/icons/codedge-logo.svg"
-            alt="Logo codedge"
-            class="logo"
-            width="80"
-            height="35"
-          />
+          <img src="/assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35">
           <h1 class="resize-text">
             <i class="fas fa-compress-arrows-alt" aria-hidden="true"></i>
             Compressore Immagini online
@@ -273,18 +223,14 @@
         </div>
       </nav>
       <div id="breadcrumb-container" aria-hidden="false"></div>
-      <script src="../../js/components/breadcrumb-loader.js" defer=""></script>
+      <script src="/js/components/breadcrumb-loader.js" defer=""></script>
     </header>
     <h2>Ottimizza JPG PNG WebP AVIF per il web</h2>
     <main>
       <div class="container">
         <div class="upload-area" id="uploadArea">
           <p>Trascina qui la tua immagine o clicca per selezionare</p>
-          <input
-            type="file"
-            id="fileInput"
-            accept="image/jpeg,image/png,image/webp,image/avif"
-          />
+          <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/avif">
         </div>
         <div class="options">
           <div class="option-row">
@@ -301,29 +247,11 @@
           <div class="option-row">
             <span class="option-label">Quality:</span>
             <div class="slider-container">
-              <label for="qualityValue" class="sr-only"
-                >Valore qualità (%)</label
-              >
-              <input
-                id="qualityValue"
-                class="value-input"
-                min="10"
-                max="100"
-                value="75%"
-              />
+              <label for="qualityValue" class="sr-only">Valore qualità (%)</label>
+              <input id="qualityValue" class="value-input" min="10" max="100" value="75%">
               <div class="slider-wrapper">
-                <label for="quality" class="sr-only"
-                  >Qualità immagine (%)</label
-                >
-                <input
-                  type="range"
-                  id="quality"
-                  class="slider"
-                  min="10"
-                  max="100"
-                  value="75"
-                  step="1"
-                />
+                <label for="quality" class="sr-only">Qualità immagine (%)</label>
+                <input type="range" id="quality" class="slider" min="10" max="100" value="75" step="1">
                 <div class="slider-fill" id="qualityFill"></div>
               </div>
             </div>
@@ -331,29 +259,11 @@
           <div class="option-row">
             <span class="option-label">Width:</span>
             <div class="slider-container">
-              <label for="maxWidthValue" class="sr-only"
-                >Larghezza massima (px)</label
-              >
-              <input
-                id="maxWidthValue"
-                class="value-input"
-                min="100"
-                max="1920"
-                value="1920px"
-              />
+              <label for="maxWidthValue" class="sr-only">Larghezza massima (px)</label>
+              <input id="maxWidthValue" class="value-input" min="100" max="1920" value="1920px">
               <div class="slider-wrapper">
-                <label for="maxWidth" class="sr-only"
-                  >Larghezza massima immagine (px)</label
-                >
-                <input
-                  type="range"
-                  id="maxWidth"
-                  class="slider"
-                  min="100"
-                  max="1920"
-                  value="1920"
-                  step="1"
-                />
+                <label for="maxWidth" class="sr-only">Larghezza massima immagine (px)</label>
+                <input type="range" id="maxWidth" class="slider" min="100" max="1920" value="1920" step="1">
                 <div class="slider-fill" id="maxWidthFill"></div>
               </div>
             </div>
@@ -504,5 +414,6 @@
         setupSlider(maxWidthSlider, maxWidthFill, maxWidthValueInput, "px"),
         (saveToButton.disabled = !0));
     </script>
-  </body>
-</html>
+  
+
+</body></html>

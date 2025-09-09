@@ -1,104 +1,34 @@
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!DOCTYPE html><html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Generatore colori - Codedge</title>
-    <meta
-      name="description"
-      content="Crea palette e colori singoli, copia i codici HEX/RGB/HSL e salva le combinazioni. Strumento gratuito e veloce per designer e sviluppatori."
-    />
-    <link
-      rel="canonical"
-      href="https://codedge.it/strumenti/generatore-colori/"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/codedge-logo-minimal.svg"
-      sizes="any"
-      type="image/svg+xml"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-192.png"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/assets/icons/android-chrome-512.png"
-      sizes="512x512"
-      type="image/png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/icons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/assets/icons/favicon-mask.svg"
-      color="#00A8FF"
-    />
-    <meta name="theme-color" content="#00A8FF" />
-    <link
-      rel="preload"
-      href="../../css/components/main.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="../../css/components/main.css"
+    <meta name="description" content="Crea palette e colori singoli, copia i codici HEX/RGB/HSL e salva le combinazioni. Strumento gratuito e veloce per designer e sviluppatori.">
+    <link rel="canonical" href="https://codedge.it/strumenti/generatore-colori/">
+    <link rel="icon" href="/assets/icons/codedge-logo-minimal.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/icons/android-chrome-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/assets/icons/android-chrome-512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons/favicon-mask.svg" color="#00A8FF">
+    <meta name="theme-color" content="#00A8FF">
+    <link rel="preload" href="/css/components/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/components/main.css"
     /></noscript>
-    <link rel="preload" href="../../css/components/navbar.css" as="style" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../css/components/navbar.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="../../css/components/tooltip.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="../../css/components/button.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="../../css/components/footer.css"
-      media="print"
-      onload="this.media='all'"
-    />
+    <link rel="preload" href="/css/components/navbar.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/components/navbar.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/components/tooltip.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/components/button.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/components/footer.css" media="print" onload="this.media='all'">
     <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
-    <script src="../../js/components/navbar.js" defer=""></script>
-    <script src="../../js/components/tooltip.js" defer=""></script>
-    <script src="../../js/components/button.js" defer=""></script>
-    <script src="../../js/components/footer.js"></script>
-    <script src="../../js/components/navbar-loader.js"></script>
+    <script src="/js/components/navbar.js" defer=""></script>
+    <script src="/js/components/tooltip.js" defer=""></script>
+    <script src="/js/components/button.js" defer=""></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/navbar-loader.js"></script>
     <style>
       h1 .fas.fa-palette {
         margin-right: 10px;
@@ -374,13 +304,7 @@
     <header>
       <nav class="navbar">
         <div class="navbar-container">
-          <img
-            src="../../assets/icons/codedge-logo.svg"
-            alt="Logo codedge"
-            class="logo"
-            width="80"
-            height="35"
-          />
+          <img src="/assets/icons/codedge-logo.svg" alt="Logo codedge" class="logo" width="80" height="35">
           <h1 class="resize-text">
             <i class="fas fa-palette"></i>Generatore colori
           </h1>
@@ -392,14 +316,14 @@
         </div>
       </nav>
       <div id="breadcrumb-container" aria-hidden="false"></div>
-      <script src="../../js/components/breadcrumb-loader.js" defer=""></script>
+      <script src="/js/components/breadcrumb-loader.js" defer=""></script>
     </header>
     <main>
       <h2 class="sub-title">Generatore di Palette di Colori</h2>
       <section class="section">
         <div class="main-content">
           <div class="color-generator-main">
-            <input id="manualColorInput" placeholder="#FF0000" />
+            <input id="manualColorInput" placeholder="#FF0000">
             <div class="color-picker-container">
               <div id="picker"></div>
               <div class="color-preview-container" id="colorPreviewContainer">
@@ -417,10 +341,7 @@
             <button id="generatePalette" class="button-simple">
               Genera Palette
             </button>
-            <div
-              class="palette-container tooltip-bottom"
-              id="paletteContainer"
-            ></div>
+            <div class="palette-container tooltip-bottom" id="paletteContainer"></div>
           </div>
           <div class="color-notes">
             <h3>Tavolozza di Appunti</h3>
@@ -469,7 +390,7 @@
               <div id="colorDetails"></div>
             </div>
             <div class="contrast-check">
-              <input id="contrastColorInput" placeholder="#FF0000" />
+              <input id="contrastColorInput" placeholder="#FF0000">
               <div id="contrastResult"></div>
             </div>
           </div>
@@ -477,15 +398,9 @@
             <div class="color-manipulation">
               <h3>Manipolazione del Colore</h3>
               <label for="lightenDarken">Schiarisci/Scurisci:</label>
-              <input
-                type="range"
-                id="lightenDarken"
-                min="-100"
-                max="100"
-                value="0"
-              />
+              <input type="range" id="lightenDarken" min="-100" max="100" value="0">
               <label for="saturate">Saturazione:</label>
-              <input type="range" id="saturate" min="0" max="100" value="50" />
+              <input type="range" id="saturate" min="0" max="100" value="50">
               <div class="tooltip-bottom" id="manipulatedColorContainer">
                 <div id="manipulatedColor"></div>
               </div>
@@ -892,5 +807,6 @@
             }));
       });
     </script>
-  </body>
-</html>
+  
+
+</body></html>
