@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+  width="63.19614mm"
+  height="28.080055mm"
+  viewBox="0 0 63.19614 28.080055"
+  version="1.1"
+  id="svg964"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <defs id="defs961">
+    <!-- Gradiente blu diagonale (modifica qui i valori per cambiare il "blue base") -->
+    <linearGradient id="gradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A6CFF" />
+      <stop offset="45%" stop-color="#3DA2FF" />
+      <stop offset="100%" stop-color="#0051D4" />
+    </linearGradient>
+
+    <!-- Variante leggermente più scura se vuoi separare il rettangolo (opzionale) -->
+    <linearGradient id="gradBlueDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0078FF" />
+      <stop offset="50%" stop-color="#1E6EFF" />
+      <stop offset="100%" stop-color="#003C9E" />
+    </linearGradient>
+  </defs>
+
+  <g id="g513">
+    <g id="layer1" transform="translate(-79.806917,-75.415037)">
+      <g
+        id="g816"
+        transform="matrix(0.26458333,0,0,0.26458333,56.437544,71.730253)"
+      >
+        <!-- Prima forma: ora riempita con gradiente blu -->
+        <path
+          d="m 185.78626,28.316532 -40,19.999998 40,20 v 10 l -55,-25 q -5,-2.5 -5,-5 0,-2.5 5,-5 l 55,-24.999998 z"
+          fill="url(#gradBlue)"
+          id="path621"
+        />
+
+        <!-- Seconda forma: stessa famiglia di blu (puoi usare gradBlueDark se preferisci più contrasto) -->
+        <path
+          d="m 232.20254,27.920607 40,20 -40,20 v 10 l 55,-25 q 5,-2.5 5,-5 0,-2.5 -5,-5 l -55,-25 z"
+          fill="url(#gradBlue)"
+          id="path625"
+        />
+
+        <!-- Rettangolo arrotondato: usa lo stesso gradiente (o gradBlueDark per separarlo) -->
+        <rect
+          x="206.74071"
+          y="-42.719067"
+          width="15"
+          height="70"
+          rx="7.5"
+          ry="7.5"
+          transform="rotate(15)"
+          id="rect623"
+          fill="url(#gradBlueDark)"
+        />
+
+        <!-- Testo: lascio bianco per leggibilità -->
+        <text
+          x="207.70409"
+          y="119.58733"
+          font-family="Arial, sans-serif"
+          font-size="48px"
+          font-weight="bold"
+          fill="#ffffff"
+          text-anchor="middle"
+          id="text627"
+        >
+          CODEDGE
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
